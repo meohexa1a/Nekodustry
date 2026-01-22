@@ -4,7 +4,6 @@ import {
   Layers,
   Calendar,
   Gamepad2,
-  Settings,
 } from "lucide-react"
 
 export const sidebarData = {
