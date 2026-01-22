@@ -4,17 +4,18 @@ import {
   Layers,
   Calendar,
   Gamepad2,
+  Settings,
 } from "lucide-react"
 
 export const sidebarData = {
   navMain: [
     {
-      title: "Tổng quan",
+      title: "Dashboard",
       url: "/",
       icon: Home,
     },
     {
-      title: "Về Neko",
+      title: "About Neko",
       url: "/about-neko",
       icon: User,
     },
@@ -36,20 +37,20 @@ export const sidebarData = {
     },
   ],
 
-  navGamemodes: [
+  navGameModes: [
     {
-      title: "Common Gamemode",
-      url: "/gamemodes/common",
+      title: "Common Game Mode",
+      url: "/game-modes/common",
       icon: Gamepad2,
     },
     {
       title: "Catali.io",
-      url: "/gamemodes/catali-io",
+      url: "/game-modes/catali-io",
       icon: Gamepad2,
     },
     {
       title: "Onslaught Protocol",
-      url: "/gamemodes/onslaught-protocol",
+      url: "/game-modes/onslaught-protocol",
       icon: Gamepad2,
     },
   ],
