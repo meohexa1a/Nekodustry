@@ -37,7 +37,8 @@ export function AppSidebar() {
           tooltip={item.title}
           isActive={isActive}
           className={`h-9 transition-colors duration-200 
-                    ${isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "text-muted-foreground"}`}>
+                    ${isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "text-muted-foreground"}`}
+        >
           <Link href={item.url}>
             <item.icon />
             <span>{item.title}</span>
@@ -51,7 +52,7 @@ export function AppSidebar() {
     <Sidebar collapsible="icon" className="border-r border-foreground">
       <SidebarHeader className="justify-center border-b border-foreground bg-secondary group-data-[collapsible=icon]:hidden">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
+          <div className="flex p-1.5 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Rocket size={18} />
           </div>
           <div className="flex flex-col">
@@ -69,22 +70,23 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">
-            Game Modes
-          </SidebarGroupLabel>
+          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">Game Modes</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>{sidebarData.navGameModes.map(renderMenuItem)}</SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">
-            System
-          </SidebarGroupLabel>
+          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">System</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
-              {[...sidebarData.navFramework, ...sidebarData.navEvents].map(renderMenuItem)}
-            </SidebarMenu>
+            <SidebarMenu>{sidebarData.navFramework.map(renderMenuItem)}</SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">Events</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>{sidebarData.navEvents.map(renderMenuItem)}</SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
