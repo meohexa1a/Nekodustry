@@ -35,7 +35,7 @@ export default function RootLayout({
           <div className="flex min-h-screen">
             <AppSidebar />
 
-            <main className="flex-1 p-4">
+            <main className="relative flex-1 p-4">
               <SidebarTrigger />
               {children}
             </main>

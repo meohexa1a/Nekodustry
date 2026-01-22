@@ -28,14 +28,22 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 // Import config của bạn
+import type { ComponentType } from "react"
+
 import { sidebarData } from "@/config/sidebar"
+
+interface SidebarItem {
+  title: string
+  url: string
+  icon: ComponentType<{ className?: string }>
+}
 
 export function AppSidebar() {
   const pathname = usePathname()
   const { state } = useSidebar()
 
   // Helper để render menu item (tránh lặp code)
-  const renderMenuItem = (item: any) => {
+  const renderMenuItem = (item: SidebarItem) => {
     const isActive = pathname === item.url
     return (
       <SidebarMenuItem key={item.url}>
