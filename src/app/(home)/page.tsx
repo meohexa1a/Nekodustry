@@ -1,7 +1,6 @@
 import { AbstractBackground } from "@/components/home/abstract-background";
 import { GatewayLinks } from "@/components/home/gateway-links";
 import { HeroSection } from "@/components/home/hero-section";
-import { PhilosophyFragments } from "@/components/home/philosophy-fragments";
 import { SystemFooter } from "@/components/home/system-footer";
 
 export default function Home() {
@@ -11,7 +10,6 @@ export default function Home() {
 
       <div className="relative z-10 flex flex-col gap-12 pb-32 sm:gap-24">
         <HeroSection />
-        <PhilosophyFragments />
         <GatewayLinks />
       </div>
 

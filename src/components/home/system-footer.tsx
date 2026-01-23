@@ -51,7 +51,6 @@ export function SystemFooter() {
           <div className="text-xs text-zinc-600 dark:text-zinc-400 font-mono space-y-2">
             <p>MIT Licensed</p>
             <p>Community Operated</p>
-            <p className="opacity-50">Not affiliated with AnukenDev</p>
           </div>
         </div>
       </div>
