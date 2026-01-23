@@ -1,18 +1,21 @@
+import { AbstractBackground } from "@/components/home/abstract-background";
+import { GatewayLinks } from "@/components/home/gateway-links";
+import { HeroSection } from "@/components/home/hero-section";
+import { PhilosophyFragments } from "@/components/home/philosophy-fragments";
+import { SystemFooter } from "@/components/home/system-footer";
+
 export default function Home() {
   return (
-    <div>
-      <main className="flex min-h-screen w-full flex-col items-center justify-center py-32 px-16 sm:items-start">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Chào mừng đến với Nekodustry!
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Nekodustry là một dự án mới hợp tác với cộng đồng Mindustry Tool.
-            Chúng tôi mong muốn cung cấp các công cụ, sự kiện và bảng xếp hạng
-            để nâng cao trải nghiệm Mindustry của bạn.
-          </p>
-        </div>
-      </main>
-    </div>
+    <main className="relative min-h-screen w-full overflow-hidden bg-transparent">
+      <AbstractBackground />
+
+      <div className="relative z-10 flex flex-col gap-12 pb-32 sm:gap-24">
+        <HeroSection />
+        <PhilosophyFragments />
+        <GatewayLinks />
+      </div>
+
+      <SystemFooter />
+    </main>
   );
 }
