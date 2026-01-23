@@ -5,6 +5,8 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { AbstractBackground } from "@/components/app/abstract-background";
+import { SystemFooter } from "@/components/app/system-footer";
 import React from "react";
 
 const geistSans = Geist({
@@ -28,15 +30,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <SidebarProvider>
-            <div className="flex">
+            <AbstractBackground />
+            <div className="flex min-h-screen">
               <AppSidebar />
 
-              <main className="relative flex-1 w-full mx-auto">
+              <main className="relative flex flex-1 flex-col w-full mx-auto">
                 <div className="sticky left-0 top-0 w-fit p-2 z-50">
                   <SidebarTrigger />
                 </div>
 
-                {children}
+                <div className="flex-1">
+                  {children}
+                </div>
+
+                <SystemFooter />
               </main>
             </div>
           </SidebarProvider>

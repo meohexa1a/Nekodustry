@@ -40,7 +40,7 @@ export default function EventsPage() {
             <Calendar className="text-primary" size={40} />
             Events Hub
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">Join the community. Compete in tournaments. Check out what's coming next.</p>
+          <p className="text-xl text-muted-foreground max-w-2xl">Join the community. Compete in tournaments. Check out what&apos;s coming next.</p>
         </header>
 
         <div className="grid gap-6 md:grid-cols-3">

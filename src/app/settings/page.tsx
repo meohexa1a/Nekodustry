@@ -2,7 +2,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 export default function SettingsPage() {
   return (
-    <div className="flex flex-col gap-6 p-6">
+    <div className="mx-auto max-w-4xl px-6 py-12 space-y-8">
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl font-bold tracking-tight">Settings</h1>
         <p className="text-muted-foreground">Manage your interface and system preferences.</p>

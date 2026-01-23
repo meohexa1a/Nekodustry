@@ -1,9 +1,8 @@
 import { Crosshair, Skull, Activity, Cpu } from "lucide-react";
-import { SystemFooter } from "@/components/app/system-footer";
 
 export default function OnslaughtProtocolPage() {
   return (
-    <div className="flex min-h-screen flex-col bg-background text-foreground font-mono selection:bg-red-600 selection:text-white relative overflow-hidden transition-colors duration-300">
+    <div className="flex flex-1 flex-col bg-background text-foreground font-mono selection:bg-red-600 selection:text-white relative overflow-hidden transition-colors duration-300">
       {/* Glitch Overlay Effect - Subtle in light mode, more prominent in dark */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px]"></div>
 
@@ -78,7 +77,6 @@ export default function OnslaughtProtocolPage() {
           </div>
         </div>
       </div>
-      <SystemFooter />
     </div>
   );
 }
