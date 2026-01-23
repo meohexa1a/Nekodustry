@@ -1,4 +1,4 @@
-import { Gamepad2, Sword, Shield, Target } from "lucide-react";
+import { Sword, Shield, Target } from "lucide-react";
 
 export default function CommonGameModePage() {
   const modes = [

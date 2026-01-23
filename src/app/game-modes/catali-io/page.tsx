@@ -1,4 +1,4 @@
-import { HandMetal, Trophy, Users, Zap, Sword } from "lucide-react";
+import { Trophy, Zap, Sword } from "lucide-react";
 import { SystemFooter } from "@/components/app/system-footer";
 
 export default function CataliIoPage() {

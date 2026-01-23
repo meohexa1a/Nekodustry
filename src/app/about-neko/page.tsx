@@ -18,11 +18,11 @@ export default function AboutNekoPage() {
         {/* Header / Identity */}
         <header className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
           <span className="inline-block text-xs font-semibold tracking-widest text-muted-foreground uppercase opacity-50">
-            // about_me
+            {'// about_me'}
           </span>
           <div className="space-y-4 text-3xl md:text-5xl font-light tracking-tight leading-tight">
             <h1 className="text-foreground">
-              Hi, I'm <span className="font-medium text-primary">meohexa1a</span>.
+              Hi, I&apos;m <span className="font-medium text-primary">meohexa1a</span>.
             </h1>
             <p className="text-muted-foreground/80 text-2xl md:text-4xl">I am a builder and system maintainer.</p>
           </div>
@@ -56,7 +56,7 @@ export default function AboutNekoPage() {
           <div className="flex items-center gap-4">
             <div className="h-px bg-border flex-1 max-w-[50px]" />
             <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-              // how_i_think
+              {'// how_i_think'}
             </h2>
           </div>
 
@@ -97,7 +97,7 @@ export default function AboutNekoPage() {
           <div className="flex items-center gap-4">
             <div className="h-px bg-border flex-1 max-w-[50px]" />
             <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-              // ecosystem_context
+              {'// ecosystem_context'}
             </h2>
           </div>
 
@@ -139,7 +139,7 @@ export default function AboutNekoPage() {
           <div className="flex items-center gap-4">
             <div className="h-px bg-border flex-1 max-w-[50px]" />
             <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-              // null_pointers (avoid)
+              {'// null_pointers (avoid)'}
             </h2>
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
@@ -149,7 +149,7 @@ export default function AboutNekoPage() {
             </li>
             <li className="flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-destructive/50" />
-              Not "official", not a representative.
+              Not &quot;official&quot;, not a representative.
             </li>
             <li className="flex items-center gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-destructive/50" />

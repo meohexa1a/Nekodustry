@@ -5,6 +5,8 @@ import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { AbstractBackground } from "@/components/app/abstract-background";
+import { SystemFooter } from "@/components/app/system-footer";
 import React from "react";
 
 const geistSans = Geist({
@@ -31,12 +33,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex">
               <AppSidebar />
 
-              <main className="relative flex-1 w-full mx-auto">
+              <main className="relative flex-1 w-full mx-auto flex flex-col min-h-screen">
+                <AbstractBackground />
+
                 <div className="sticky left-0 top-0 w-fit p-2 z-50">
                   <SidebarTrigger />
                 </div>
 
-                {children}
+                <div className="flex-1">
+                  {children}
+                </div>
+
+                <SystemFooter />
               </main>
             </div>
           </SidebarProvider>
