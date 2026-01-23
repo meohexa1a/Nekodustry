@@ -28,10 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <SidebarProvider>
-            <div className="flex">
+            <div className="flex w-full">
               <AppSidebar />
 
-              <main className="relative flex-1 w-full mx-auto">
+              <main className="relative flex-1 w-full min-h-screen">
                 <div className="sticky left-0 top-0 w-fit p-2 z-50">
                   <SidebarTrigger />
                 </div>

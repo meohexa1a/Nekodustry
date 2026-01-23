@@ -58,5 +58,6 @@ This document outlines the architectural principles, coding standards, and rules
 ## 6. Prohibited Actions (Anti-Patterns)
 
 - Never edit build artifacts (`dist`, `.next`).
-- Never use `style={{ ... }}` for static styling; use Tailwind classes.
+- Never use `style={{ ... }}` for static styling; use Tailwind classes, or creating new css file at same directory of the page. 
 - Never introduce `tailwind.config.js` or `tailwind.config.ts`; use CSS variables and `@theme inline` in `globals.css`.
+- Never use `style={{ ... }}` for static styling for component, use Tailwind classes, or define it in `globals.css`.
