@@ -31,12 +31,19 @@ export function GatewayLinks() {
   return (
     <section className="px-6 py-24 sm:px-12">
       <div className="mx-auto max-w-4xl space-y-4">
-        <div className="mb-12 font-mono text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600">Available Service Nodes</div>
+        <div className="mb-12 font-mono text-xs uppercase tracking-[0.2em] text-zinc-400 dark:text-zinc-600">
+          Available Service Nodes
+        </div>
 
         <NodeLink href="/" title="Dashboard" subtitle="Operational overview" icon={LayoutDashboard} />
         <NodeLink href="/events" title="Events" subtitle="Managed temporal services" icon={Calendar} />
         <NodeLink href="/mintymdt" title="MintyMDT" subtitle="Framework service integration" icon={Layers} />
-        <NodeLink href="/game-modes/common" title="Game Modes" subtitle="Gameplay service instances" icon={Gamepad2} />
+        <NodeLink
+          href="/game-modes/common"
+          title="Game Modes"
+          subtitle="Gameplay service instances"
+          icon={Gamepad2}
+        />
       </div>
     </section>
   );

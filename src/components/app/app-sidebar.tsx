@@ -14,7 +14,9 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarFooter,
 } from "@/components/ui/sidebar";
+import { Settings } from "lucide-react";
 
 import type { ComponentType } from "react";
 import { sidebarData } from "@/config/sidebar";
@@ -37,8 +39,7 @@ export function AppSidebar() {
           tooltip={item.title}
           isActive={isActive}
           className={`h-9 transition-colors duration-200 
-                    ${isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "text-muted-foreground"}`}
-        >
+                    ${isActive ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "text-muted-foreground"}`}>
           <Link href={item.url}>
             <item.icon />
             <span>{item.title}</span>
@@ -49,15 +50,15 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar collapsible="icon" className="border-r border-foreground">
-      <SidebarHeader className="justify-center border-b border-foreground bg-secondary group-data-[collapsible=icon]:hidden">
+    <Sidebar collapsible="icon" className="border-r border-foreground/50">
+      <SidebarHeader className="justify-center border-b border-foreground/50 bg-secondary group-data-[collapsible=icon]:hidden">  
         <div className="flex items-center gap-2">
           <div className="flex p-1.5 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Rocket size={18} />
           </div>
           <div className="flex flex-col">
             <span className="truncate font-semibold text-sm">Nekodustry</span>
-            <span className="truncate text-xs text-muted-foreground">Hub</span>
+            <span className="truncate text-xs text-muted-foreground">Service Portal</span>
           </div>
         </div>
       </SidebarHeader>
@@ -70,7 +71,9 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">Game Modes</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-xs font-medium text-muted-foreground/70">
+            Game Modes
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>{sidebarData.navGameModes.map(renderMenuItem)}</SidebarMenu>
           </SidebarGroupContent>
@@ -90,6 +93,22 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              asChild
+              tooltip="Settings"
+              className="h-9 transition-colors duration-200 text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
+              <Link href="/settings">
+                <Settings />
+                <span>Settings</span>
+              </Link>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarFooter>
     </Sidebar>
   );
 }

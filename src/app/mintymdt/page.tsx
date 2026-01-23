@@ -1,45 +1,51 @@
 "use client";
 
 import { Layers, Zap, Code, Feather, GitBranch, ArrowRight, X, Check, Package, Server } from "lucide-react";
-import { AbstractBackground } from "@/components/home/abstract-background";
-import { SystemFooter } from "@/components/home/system-footer";
+import { AbstractBackground } from "@/components/app/abstract-background";
+import { SystemFooter } from "@/components/app/system-footer";
 
 export default function MintyMDTPage() {
   const features = [
     {
       icon: <Feather className="text-purple-600 dark:text-purple-400" />,
       title: "Dependency Injection",
-      description: "Powered by Feather for seamless dependency management. Eliminate static instances and spaghetti code for a cleaner, testable architecture.",
+      description:
+        "Powered by Feather for seamless dependency management. Eliminate static instances and spaghetti code for a cleaner, testable architecture.",
     },
     {
       icon: <Zap className="text-yellow-600 dark:text-yellow-400" />,
       title: "Ultra Lightweight",
-      description: "~64KB footprint. No heavy reflection, no runtime magic. Optimized for both small private servers and massive networks.",
+      description:
+        "~64KB footprint. No heavy reflection, no runtime magic. Optimized for both small private servers and massive networks.",
     },
     {
       icon: <Code className="text-blue-600 dark:text-blue-400" />,
       title: "Anti-Boilerplate",
-      description: "Leverages Java 21 features (records, pattern matching) to slash verbose code. Focus on your logic, not the ceremony.",
+      description:
+        "Leverages Java 21 features (records, pattern matching) to slash verbose code. Focus on your logic, not the ceremony.",
     },
     {
       icon: <Server className="text-emerald-600 dark:text-emerald-400" />,
       title: "Built-in Ecosystem",
-      description: "Includes State Manager, Event System, and Snapshot/Rollback capabilities out of the box. Use what you need, ignore what you don't.",
+      description:
+        "Includes State Manager, Event System, and Snapshot/Rollback capabilities out of the box. Use what you need, ignore what you don't.",
     },
     {
       icon: <Package className="text-orange-600 dark:text-orange-400" />,
       title: "Native Java 21 Utilities",
-      description: "No reinventing the wheel. Built on standard Java APIs so new developers can hit the ground running without learning a custom DSL.",
+      description:
+        "No reinventing the wheel. Built on standard Java APIs so new developers can hit the ground running without learning a custom DSL.",
     },
     {
       icon: <GitBranch className="text-zinc-600 dark:text-zinc-400" />,
       title: "100% Open Source",
-      description: "Transparent, community-driven, and free from lock-in. Fork it, mod it, extend it—it's your infrastructure.",
+      description:
+        "Transparent, community-driven, and free from lock-in. Fork it, mod it, extend it—it's your infrastructure.",
     },
   ];
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden bg-transparent text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/30">
+    <div className="relative min-h-screen w-full bg-transparent text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/30">
       <AbstractBackground />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 md:px-12 lg:pt-32">
@@ -51,21 +57,25 @@ export default function MintyMDTPage() {
 
           <h1 className="mb-8 max-w-4xl text-6xl font-black tracking-tight md:text-8xl text-zinc-900 dark:text-white">
             <span className="block">MintyMDT</span>
-            <span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-emerald-500 via-teal-500 to-cyan-500 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400 bg-clip-text text-transparent">
               Version 3
             </span>
           </h1>
 
           <p className="mx-auto mb-12 max-w-2xl text-xl font-medium text-zinc-600 dark:text-zinc-400 md:text-2xl">
             The ultra-lightweight server framework for Mindustry. <br />
-            Engineered for <span className="text-zinc-900 dark:text-white underline decoration-emerald-500 decoration-4 underline-offset-4">Developer Experience</span>.
+            Engineered for{" "}
+            <span className="text-zinc-900 dark:text-white underline decoration-emerald-500 decoration-4 underline-offset-4">
+              Developer Experience
+            </span>
+            .
           </p>
 
           <div className="flex flex-wrap items-center gap-6">
             <button className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-full bg-zinc-900 dark:bg-white px-10 py-4 font-bold text-white dark:text-zinc-950 transition-all hover:scale-105 hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-xl shadow-emerald-500/10">
               <span className="relative z-10">Get Started</span>
               <ArrowRight size={20} className="relative z-10 transition-transform group-hover:translate-x-1" />
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-cyan-400 opacity-0 transition-opacity group-hover:opacity-20" />
+              <div className="absolute inset-0 bg-linear-to-r from-emerald-400 to-cyan-400 opacity-0 transition-opacity group-hover:opacity-20" />
             </button>
             <button className="flex items-center justify-center gap-3 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 px-10 py-4 font-bold text-zinc-900 dark:text-white backdrop-blur-md transition-all hover:bg-zinc-50 dark:hover:bg-zinc-800">
               <GitBranch size={20} />
@@ -118,7 +128,8 @@ export default function MintyMDTPage() {
                   </div>
                 </div>
                 <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-                  MintyMDT acts as an organizational layer. It separates services, manages lifecycles, and standardizes state without overwhelming the core game logic.
+                  MintyMDT acts as an organizational layer. It separates services, manages lifecycles, and
+                  standardizes state without overwhelming the core game logic.
                 </p>
               </div>
             </div>
@@ -131,8 +142,7 @@ export default function MintyMDTPage() {
             {features.map((feature, idx) => (
               <div
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:bg-white/60 dark:hover:bg-zinc-800/40 hover:scale-[1.02] shadow-sm hover:shadow-xl"
-              >
+                className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:bg-white/60 dark:hover:bg-zinc-800/40 hover:scale-[1.02] shadow-sm hover:shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/5 dark:to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative z-10">
                   <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-zinc-950 ring-1 ring-zinc-200 dark:ring-white/10 group-hover:scale-110 transition-transform duration-300 shadow-sm">
@@ -162,7 +172,8 @@ export default function MintyMDTPage() {
 
               <pre className="overflow-x-auto text-sm font-mono leading-relaxed">
                 <code className="text-zinc-300">
-                  <span className="text-[#ff7b72]">public</span> <span className="text-[#ff7b72]">class</span> <span className="text-[#d2a8ff]">PlayerService</span>{" "}
+                  <span className="text-[#ff7b72]">public</span> <span className="text-[#ff7b72]">class</span>{" "}
+                  <span className="text-[#d2a8ff]">PlayerService</span>{" "}
                   <span className="text-[#e6edf3]">{`{`}</span>
                   {"\n"}
                   {"  "}
@@ -172,14 +183,16 @@ export default function MintyMDTPage() {
                   <span className="text-[#d2a8ff]">@Inject</span>
                   {"\n"}
                   {"  "}
-                  <span className="text-[#ff7b72]">public</span> <span className="text-[#d2a8ff]">PlayerService</span>
+                  <span className="text-[#ff7b72]">public</span>{" "}
+                  <span className="text-[#d2a8ff]">PlayerService</span>
                   <span className="text-[#e6edf3]">(</span>
                   {"\n"}
                   {"    "}
                   <span className="text-[#79c0ff]">EventBus</span> <span className="text-[#e6edf3]">events,</span>
                   {"\n"}
                   {"    "}
-                  <span className="text-[#79c0ff]">StateManager</span> <span className="text-[#e6edf3]">state</span>
+                  <span className="text-[#79c0ff]">StateManager</span>{" "}
+                  <span className="text-[#e6edf3]">state</span>
                   {"\n"}
                   {"  "}
                   <span className="text-[#e6edf3]">) {`{`}</span>
@@ -207,19 +220,26 @@ export default function MintyMDTPage() {
                   <span className="text-purple-600 dark:text-purple-400">Dependency Injection</span>
                 </h2>
                 <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                  Stop calling <code className="rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-zinc-700 dark:text-zinc-300 text-sm font-mono">Vars.xxx</code> globally.
-                  With MintyMDT, every service requests exactly what it needs.
+                  Stop calling{" "}
+                  <code className="rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-zinc-700 dark:text-zinc-300 text-sm font-mono">
+                    Vars.xxx
+                  </code>{" "}
+                  globally. With MintyMDT, every service requests exactly what it needs.
                 </p>
               </div>
 
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-xl bg-white/50 dark:bg-zinc-900/50 p-4 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
                   <h4 className="font-bold text-zinc-900 dark:text-white mb-2">Testability</h4>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400">Mock dependencies effortlessly. Unit test your logic without booting up the entire game server.</p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                    Mock dependencies effortlessly. Unit test your logic without booting up the entire game server.
+                  </p>
                 </div>
                 <div className="rounded-xl bg-white/50 dark:bg-zinc-900/50 p-4 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
                   <h4 className="font-bold text-zinc-900 dark:text-white mb-2">Clarity</h4>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400">Constructor signatures tell you exactly what a component does and what it touches.</p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                    Constructor signatures tell you exactly what a component does and what it touches.
+                  </p>
                 </div>
               </div>
             </div>
@@ -233,7 +253,9 @@ export default function MintyMDTPage() {
               <thead>
                 <tr className="border-b border-zinc-200 dark:border-white/5 bg-white/50 dark:bg-white/5">
                   <th className="p-6 text-lg font-bold text-red-500 dark:text-red-400 w-1/2">Vanilla Mindustry</th>
-                  <th className="p-6 text-lg font-bold text-emerald-600 dark:text-emerald-400 w-1/2">MintyMDT v3</th>
+                  <th className="p-6 text-lg font-bold text-emerald-600 dark:text-emerald-400 w-1/2">
+                    MintyMDT v3
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200 dark:divide-white/5">

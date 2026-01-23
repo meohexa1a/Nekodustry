@@ -119,8 +119,23 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  html {
+    *::-webkit-scrollbar {
+      width: 1px;
+      height: 1px;
+    }
   
+    *::-webkit-scrollbar-track {
+      background: var(--background);
+    }
+  
+    *::-webkit-scrollbar-thumb {
+      @apply bg-foreground/50;
+    }
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply min-w-full min-h-screen bg-background text-foreground;
   }
 }

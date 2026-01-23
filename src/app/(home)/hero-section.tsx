@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-[60vh] flex-col justify-center px-6 pt-24 sm:px-12 md:pt-32">
+    <section className="relative flex flex-col justify-center w-full px-6 pt-24 sm:px-12 md:pt-32">
       <div className="space-y-8">
         <div className="group relative inline-block">
           {/* Subtle System Annotation */}

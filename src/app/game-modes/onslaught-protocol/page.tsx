@@ -1,5 +1,5 @@
 import { Crosshair, Skull, Activity, Cpu } from "lucide-react";
-import { SystemFooter } from "@/components/home/system-footer";
+import { SystemFooter } from "@/components/app/system-footer";
 
 export default function OnslaughtProtocolPage() {
   return (
@@ -23,7 +23,8 @@ export default function OnslaughtProtocolPage() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed border-t border-border pt-8">
-              <strong className="text-foreground">High octane PVP warfare.</strong> Relentless combat where only the adaptive survive. Analyze. Engagement. Eliminate.
+              <strong className="text-foreground">High octane PVP warfare.</strong> Relentless combat where only
+              the adaptive survive. Analyze. Engagement. Eliminate.
             </p>
 
             <div className="space-y-4">
