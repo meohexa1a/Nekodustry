@@ -143,7 +143,7 @@ export default function MintyMDTPage() {
               <div
                 key={idx}
                 className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:bg-white/60 dark:hover:bg-zinc-800/40 hover:scale-[1.02] shadow-sm hover:shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent dark:from-white/5 dark:to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-linear-to-br from-white/40 to-transparent dark:from-white/5 dark:to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative z-10">
                   <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-zinc-950 ring-1 ring-zinc-200 dark:ring-white/10 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     {feature.icon}
