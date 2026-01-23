@@ -44,6 +44,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  --color-status-success: var(--status-success);
 }
 
 :root {
@@ -79,6 +80,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --status-success: oklch(0.623 0.188 145.8);
 }
 
 .dark {
@@ -113,6 +115,7 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --status-success: oklch(0.623 0.188 145.8);
 }
 
 @layer base {
@@ -125,11 +128,11 @@
       width: 1px;
       height: 1px;
     }
-  
+
     *::-webkit-scrollbar-track {
       background: var(--background);
     }
-  
+
     *::-webkit-scrollbar-thumb {
       @apply bg-foreground/50;
     }
@@ -138,4 +141,21 @@
   body {
     @apply min-w-full min-h-screen bg-background text-foreground;
   }
+}
+
+@utility text-xxs {
+  font-size: 10px;
+  line-height: 1rem;
+}
+
+@utility tracking-widest-xl {
+  letter-spacing: 0.15em;
+}
+
+@utility tracking-widest-2xl {
+  letter-spacing: 0.2em;
+}
+
+@utility leading-tighter {
+  line-height: 1.1;
 }
