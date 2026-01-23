@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AppSidebar />
 
             <main className="relative flex-1">
-              <div className="absolute top-5 left-5 z-50">
+              <div className="sticky left-0 top-0 p-2 z-50">
                 <SidebarTrigger />
               </div>
 
