@@ -1,10 +1,4 @@
-import {
-  Home,
-  User,
-  Layers,
-  Calendar,
-  Gamepad2,
-} from "lucide-react"
+import { Home, User, Layers, Calendar, CalendarClock, PlayCircle, History, Gamepad2 } from "lucide-react";
 
 export const sidebarData = {
   navMain: [
@@ -30,9 +24,24 @@ export const sidebarData = {
 
   navEvents: [
     {
-      title: "Events",
+      title: "Overview",
       url: "/events",
       icon: Calendar,
+    },
+    {
+      title: "Scheduled",
+      url: "/events/scheduled",
+      icon: CalendarClock,
+    },
+    {
+      title: "Ongoing",
+      url: "/events/ongoing",
+      icon: PlayCircle,
+    },
+    {
+      title: "Past",
+      url: "/events/past",
+      icon: History,
     },
   ],
 
@@ -53,4 +62,4 @@ export const sidebarData = {
       icon: Gamepad2,
     },
   ],
-}
+};

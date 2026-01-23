@@ -1,59 +1,56 @@
-import { Gamepad2, Sparkles, Zap, Timer } from "lucide-react";
+import { HandMetal, Trophy, Users, Zap, Sword } from "lucide-react";
+import { SystemFooter } from "@/components/home/system-footer";
 
 export default function CataliIoPage() {
   return (
-    <div className="flex min-h-screen w-full flex-col p-8 md:p-12 lg:p-16">
-      <div className="mx-auto max-w-6xl w-full">
-        <div className="relative overflow-hidden rounded-[3rem] bg-indigo-600 p-8 md:p-20 text-white shadow-2xl">
-          <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
-            <div className="space-y-6 flex-1 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-bold backdrop-blur-md">
-                <Sparkles size={16} />
-                Chế độ chơi mới nhất
-              </div>
-              <h1 className="text-5xl font-black md:text-7xl">Catali.io</h1>
-              <p className="text-xl text-indigo-100 max-w-xl">Một trải nghiệm Mindustry tốc độ cao, phong cách IO, nơi sự phản xạ và chiến thuật được đẩy lên giới hạn cao nhất.</p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <button className="rounded-2xl bg-white px-8 py-4 font-bold text-indigo-600 transition-transform hover:scale-105 active:scale-95 shadow-lg">Chơi ngay</button>
-                <button className="rounded-2xl bg-indigo-500 px-8 py-4 font-bold text-white transition-all hover:bg-indigo-400 border border-indigo-400/50">
-                  Xem bảng xếp hạng
-                </button>
-              </div>
-            </div>
-            <div className="w-full max-w-md aspect-square bg-indigo-500/30 rounded-[2.5rem] border border-white/10 backdrop-blur-sm flex items-center justify-center">
-              <Gamepad2 size={120} className="text-white/20" />
-            </div>
-          </div>
+    <div className="flex min-h-screen flex-col bg-background text-foreground font-sans selection:bg-pink-500 selection:text-white relative overflow-hidden transition-colors duration-300">
+      <div className="flex-1 relative">
+        {/* Background noise/texture that works in both modes - slightly different opacity */}
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 dark:opacity-20 brightness-100 contrast-150 mix-blend-overlay pointer-events-none"></div>
 
-          {/* Animated background elements */}
-          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[100px]" />
-        </div>
+        <div className="container mx-auto px-4 py-20 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            <div className="inline-block animate-bounce">
+              <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-[0_0_20px_rgba(236,72,153,0.5)]">MAINTENANCE: PREPARING ARENA</span>
+            </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          <div className="p-8 rounded-[2rem] bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 space-y-4">
-            <div className="h-12 w-12 rounded-2xl bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center text-indigo-600">
-              <Timer size={24} />
+            <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 drop-shadow-sm dark:drop-shadow-2xl">
+              catali.io
+            </h1>
+
+            <p className="text-2xl md:text-3xl font-medium text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              The next generation <span className="text-pink-500 dark:text-pink-400 font-bold">RPG IO</span> experience. Level up, evolve, and dominate the arena.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6 pt-12">
+              {[
+                { icon: Sword, title: "Epic RPG Battles", desc: "Customize your build with infinite combinations." },
+                { icon: Zap, title: "Fast-Paced IO", desc: "Jump in instantly. No accounts, pure action." },
+                { icon: Trophy, title: "Global Leaderboards", desc: "Climb the ranks and become a legend." },
+              ].map((feature, i) => (
+                <div
+                  key={i}
+                  className="bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-black/5 dark:border-white/10 p-8 rounded-3xl hover:-translate-y-2 transition-transform duration-300 shadow-sm dark:shadow-none"
+                >
+                  <feature.icon className="w-12 h-12 text-pink-500 mb-6 mx-auto" />
+                  <h3 className="text-xl font-bold mb-2 text-foreground">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.desc}</p>
+                </div>
+              ))}
             </div>
-            <h3 className="text-xl font-bold">Trận đấu ngắn</h3>
-            <p className="text-zinc-500">Mỗi trận chỉ kéo dài từ 5-10 phút, lý tưởng cho việc giải trí nhanh.</p>
-          </div>
-          <div className="p-8 rounded-[2rem] bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 space-y-4">
-            <div className="h-12 w-12 rounded-2xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600">
-              <Zap size={24} />
+
+            <div className="pt-20">
+              <p className="text-sm text-muted-foreground uppercase tracking-widest mb-4">Coming Soon</p>
+              <div className="flex justify-center gap-2">
+                {[...Array(3)].map((_, i) => (
+                  <div key={i} className="w-3 h-3 bg-pink-500 rounded-full animate-ping" style={{ animationDelay: `${i * 200}ms` }} />
+                ))}
+              </div>
             </div>
-            <h3 className="text-xl font-bold">Nâng cấp tức thì</h3>
-            <p className="text-zinc-500">Hệ thống nâng cấp động giúp bạn mạnh lên từng phút trong trận đấu.</p>
-          </div>
-          <div className="p-8 rounded-[2rem] bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 space-y-4">
-            <div className="h-12 w-12 rounded-2xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center text-rose-600">
-              <Gamepad2 size={24} />
-            </div>
-            <h3 className="text-xl font-bold">Thi đấu PvP</h3>
-            <p className="text-zinc-500">Đối đầu trực tiếp với hàng chục người chơi khác trên một bản đồ khổng lồ.</p>
           </div>
         </div>
       </div>
+      <SystemFooter />
     </div>
   );
 }

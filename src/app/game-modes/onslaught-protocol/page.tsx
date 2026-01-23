@@ -1,85 +1,83 @@
-import { ShieldAlert, Cpu, Activity, Zap } from "lucide-react";
+import { Crosshair, Skull, Activity, Cpu } from "lucide-react";
+import { SystemFooter } from "@/components/home/system-footer";
 
 export default function OnslaughtProtocolPage() {
   return (
-    <div className="flex min-h-screen w-full flex-col p-8 md:p-12 lg:p-16 bg-zinc-950 text-white">
-      <div className="mx-auto max-w-5xl space-y-20">
-        <header className="relative py-20 px-8 rounded-[3rem] overflow-hidden">
-          <div className="absolute inset-0 bg-red-600/10 border border-red-500/20 rounded-[3rem]" />
-          <div className="relative z-10 text-center space-y-6">
-            <div className="inline-block animate-pulse mb-4">
-              <ShieldAlert size={48} className="text-red-500 mx-auto" />
-            </div>
-            <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic">
-              Onslaught <span className="text-red-600">Protocol</span>
-            </h1>
-            <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-              Chế độ thử thách tối thượng. Liệu bạn có thể sống sót trước cơn thịnh nộ của AI và những đợt tấn công không hồi kết?
-            </p>
-          </div>
-          {/* Grid background effect */}
-          <div
-            className="absolute inset-0 opacity-20 pointer-events-none"
-            style={{ backgroundImage: "radial-gradient(circle at 2px 2px, #ef4444 1px, transparent 0)", backgroundSize: "40px 40px" }}
-          />
-        </header>
+    <div className="flex min-h-screen flex-col bg-background text-foreground font-mono selection:bg-red-600 selection:text-white relative overflow-hidden transition-colors duration-300">
+      {/* Glitch Overlay Effect - Subtle in light mode, more prominent in dark */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px]"></div>
 
-        <section className="grid gap-12 md:grid-cols-2">
+      <div className="container mx-auto px-4 py-20 relative z-10 flex-1 flex flex-col justify-center">
+        <div className="border-l-4 border-red-600 pl-8 mb-12">
+          <div className="flex items-center gap-3 text-red-600 dark:text-red-500 mb-2">
+            <Activity className="animate-pulse" />
+            <span className="tracking-[0.5em] text-sm font-bold uppercase">System Status: Development</span>
+          </div>
+          <h1 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none text-foreground">
+            Onslaught
+            <br />
+            <span className="text-red-600">Protocol</span>
+          </h1>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold flex items-center gap-3">
-              <Cpu className="text-red-500" /> Hệ thống AI Thích ứng
-            </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed">
-              Không giống như các đợt tấn công thông thường, AI trong Onslaught Protocol sẽ phân tích điểm yếu trong hệ thống phòng thủ của bạn và thay đổi chiến thuật theo thời
-              gian thực.
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed border-t border-border pt-8">
+              <strong className="text-foreground">High octane PVP warfare.</strong> Relentless combat where only the adaptive survive. Analyze. Engagement. Eliminate.
             </p>
+
             <div className="space-y-4">
-              {["Tăng cường độ khó động", "Đơn vị quân đặc chủng", "Bản đồ thay đổi cấu trúc"].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white/5 p-4 rounded-2xl border border-white/10">
-                  <div className="h-2 w-2 rounded-full bg-red-500" />
-                  {item}
-                </div>
-              ))}
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <Crosshair className="text-red-600 dark:text-red-500" />
+                <span>Tactical Team-Based Combat</span>
+              </div>
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <Skull className="text-red-600 dark:text-red-500" />
+                <span>Permadeath Hardcore Modes</span>
+              </div>
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <Cpu className="text-red-600 dark:text-red-500" />
+                <span>AI-Assisted Chaos Events</span>
+              </div>
             </div>
+
+            <button className="mt-8 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-widest skew-x-[-10deg] transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(220,38,38,0.3)]">
+              <span className="skew-x-[10deg] inline-block">Join Waitlist</span>
+            </button>
           </div>
 
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-100 transition duration-1000"></div>
-            <div className="relative h-full bg-zinc-900 border border-white/10 rounded-3xl p-8 flex flex-col justify-center">
-              <Activity className="text-red-500 mb-6" size={40} />
-              <h3 className="text-2xl font-bold mb-4">Chỉ số Sống sót</h3>
-              <div className="space-y-6">
+          <div className="relative hidden md:block">
+            <div className="absolute inset-0 bg-red-600/10 dark:bg-red-600/20 blur-[100px] rounded-full"></div>
+            <div className="relative border border-red-900/20 dark:border-red-900/50 bg-white/50 dark:bg-black/50 backdrop-blur-sm p-8 rounded-lg shadow-xl">
+              <div className="flex justify-between items-end mb-8 border-b border-red-900/10 dark:border-red-900/30 pb-4">
                 <div>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span>Độ khó hiện tại</span>
-                    <span className="text-red-500">Tier S+</span>
-                  </div>
-                  <div className="h-2 w-full bg-zinc-800 rounded-full overflow-hidden">
-                    <div className="h-full bg-red-600 w-[90%]" />
-                  </div>
+                  <div className="text-xs text-red-600 dark:text-red-500 tracking-widest mb-1">LIVE FEED</div>
+                  <div className="text-2xl font-bold text-foreground">SECTOR 7</div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/5 p-4 rounded-xl text-center">
-                    <div className="text-sm text-zinc-500">Tỷ lệ thắng</div>
-                    <div className="text-2xl font-black">2.4%</div>
-                  </div>
-                  <div className="bg-white/5 p-4 rounded-xl text-center">
-                    <div className="text-sm text-zinc-500">Kỷ lục tuần</div>
-                    <div className="text-2xl font-black">W-42</div>
-                  </div>
+                <div className="text-right">
+                  <div className="text-4xl font-black text-red-600">8,492</div>
+                  <div className="text-xs text-muted-foreground">CASUALTIES</div>
+                </div>
+              </div>
+              <div className="space-y-2 font-mono text-sm opacity-75 dark:opacity-50 text-foreground">
+                <div className="flex justify-between">
+                  <span>&gt; PROTOCOL_INIT</span>
+                  <span className="text-green-600 dark:text-green-500">COMPLETE</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>&gt; WEAPON_SYSTEMS</span>
+                  <span className="text-yellow-600 dark:text-yellow-500">ONLINE</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>&gt; TARGET_ACQUISITION</span>
+                  <span className="animate-pulse text-red-600 dark:text-red-500">SEARCHING...</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-
-        <footer className="text-center pb-20">
-          <button className=" group relative px-12 py-6 overflow-hidden rounded-full bg-white text-zinc-950 font-black text-xl transition-all hover:scale-110 active:scale-95">
-            <span className="relative z-10">KÍCH HOẠT GIAO THỨC</span>
-            <div className="absolute inset-0 bg-red-600 translate-y-full group-hover:translate-y-0 transition-transform" />
-          </button>
-        </footer>
+        </div>
       </div>
+      <SystemFooter />
     </div>
   );
 }
