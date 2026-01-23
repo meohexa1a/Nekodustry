@@ -1,18 +1,6 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 export function AbstractBackground() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
   return (
-    <div className="fixed inset-0 -z-50 overflow-hidden bg-zinc-50 dark:bg-zinc-950">
+    <div className="fixed inset-0 -z-50 overflow-hidden bg-background" aria-hidden="true">
       {/* Base Grid Layer - Static structure */}
       <div
         className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
