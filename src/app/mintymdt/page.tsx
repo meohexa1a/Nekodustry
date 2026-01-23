@@ -48,86 +48,89 @@ export default function MintyMDTPage() {
     <div className="relative min-h-screen w-full bg-transparent text-zinc-900 dark:text-zinc-100 selection:bg-emerald-500/30">
       <AbstractBackground />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-24 md:px-12 lg:pt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-32 md:px-12 lg:pt-48">
         {/* Hero Section */}
-        <header className="mb-32 flex flex-col items-center text-center">
-          <div className="mb-8 flex items-center justify-center rounded-3xl bg-white/50 dark:bg-zinc-900/50 p-6 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl ring-1 ring-zinc-200 dark:ring-white/10">
-            <Layers size={48} className="text-emerald-600 dark:text-emerald-400" />
+        <header className="mb-40 flex flex-col items-center text-center">
+          <div className="relative">
+            <div className="absolute inset-0 animate-pulse rounded-full bg-emerald-500/20 blur-3xl" />
+            <div className="relative mb-12 flex items-center justify-center rounded-[2rem] bg-white/50 dark:bg-zinc-900/50 p-8 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl ring-1 ring-zinc-200 dark:ring-white/10">
+              <Layers size={64} className="text-emerald-600 dark:text-emerald-400" />
+            </div>
           </div>
 
-          <h1 className="mb-8 max-w-4xl text-6xl font-black tracking-tight md:text-8xl text-zinc-900 dark:text-white">
-            <span className="block">MintyMDT</span>
+          <h1 className="mb-10 max-w-5xl text-7xl font-black tracking-tight md:text-9xl text-zinc-900 dark:text-white">
+            <span className="block mb-2">MintyMDT</span>
             <span className="bg-linear-to-r from-emerald-500 via-teal-500 to-cyan-500 dark:from-emerald-400 dark:via-teal-400 dark:to-cyan-400 bg-clip-text text-transparent">
               Version 3
             </span>
           </h1>
 
-          <p className="mx-auto mb-12 max-w-2xl text-xl font-medium text-zinc-600 dark:text-zinc-400 md:text-2xl">
+          <p className="mx-auto mb-16 max-w-3xl text-2xl font-medium text-zinc-600 dark:text-zinc-400 md:text-3xl leading-relaxed">
             The ultra-lightweight server framework for Mindustry. <br />
             Engineered for{" "}
-            <span className="text-zinc-900 dark:text-white underline decoration-emerald-500 decoration-4 underline-offset-4">
+            <span className="text-zinc-900 dark:text-white underline decoration-emerald-500 decoration-4 underline-offset-8">
               Developer Experience
             </span>
             .
           </p>
 
-          <div className="flex flex-wrap items-center gap-6">
-            <button className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-full bg-zinc-900 dark:bg-white px-10 py-4 font-bold text-white dark:text-zinc-950 transition-all hover:scale-105 hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-xl shadow-emerald-500/10">
+          <div className="flex flex-wrap items-center gap-8">
+            <button className="group relative flex items-center justify-center gap-3 overflow-hidden rounded-full bg-zinc-900 dark:bg-white px-12 py-5 text-lg font-bold text-white dark:text-zinc-950 transition-all hover:scale-105 hover:bg-zinc-800 dark:hover:bg-zinc-200 shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/30">
               <span className="relative z-10">Get Started</span>
-              <ArrowRight size={20} className="relative z-10 transition-transform group-hover:translate-x-1" />
+              <ArrowRight size={22} className="relative z-10 transition-transform group-hover:translate-x-1" />
               <div className="absolute inset-0 bg-linear-to-r from-emerald-400 to-cyan-400 opacity-0 transition-opacity group-hover:opacity-20" />
             </button>
-            <button className="flex items-center justify-center gap-3 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 px-10 py-4 font-bold text-zinc-900 dark:text-white backdrop-blur-md transition-all hover:bg-zinc-50 dark:hover:bg-zinc-800">
-              <GitBranch size={20} />
+            <button className="flex items-center justify-center gap-3 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 px-12 py-5 text-lg font-bold text-zinc-900 dark:text-white backdrop-blur-md transition-all hover:bg-zinc-50 dark:hover:bg-zinc-800 hover:scale-105">
+              <GitBranch size={22} />
               <span>View Source</span>
             </button>
           </div>
         </header>
 
         {/* The "Why" Section */}
-        <section className="mb-32">
-          <div className="relative overflow-hidden rounded-[2.5rem] bg-white/40 dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/5 p-8 md:p-16 shadow-2xl backdrop-blur-sm">
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-emerald-500/10 blur-[128px]" />
+        <section className="mb-40">
+          <div className="relative overflow-hidden rounded-[3rem] bg-white/40 dark:bg-zinc-900/40 border border-zinc-200 dark:border-white/5 p-10 md:p-20 shadow-2xl backdrop-blur-sm">
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[128px]" />
 
-            <div className="relative z-10 grid gap-16 lg:grid-cols-2">
+            <div className="relative z-10 grid gap-20 lg:grid-cols-2 items-center">
               <div>
-                <h2 className="mb-8 text-4xl font-bold leading-tight text-zinc-900 dark:text-white md:text-5xl">
+                <h2 className="mb-10 text-5xl font-bold leading-tight text-zinc-900 dark:text-white md:text-6xl">
                   Why define logic <br />
                   <span className="text-emerald-600 dark:text-emerald-400">the hard way?</span>
                 </h2>
-                <ul className="space-y-6 text-lg text-zinc-600 dark:text-zinc-400">
-                  <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
-                      <X size={14} strokeWidth={3} />
+                <ul className="space-y-8 text-xl text-zinc-600 dark:text-zinc-400">
+                  <li className="flex items-start gap-5">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
+                      <X size={18} strokeWidth={3} />
                     </div>
                     <span>Spaghetti logic tangled in `Events.on` and `init()` blocks.</span>
                   </li>
-                  <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
-                      <X size={14} strokeWidth={3} />
+                  <li className="flex items-start gap-5">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
+                      <X size={18} strokeWidth={3} />
                     </div>
                     <span>Global state everywhere. Impossible to test, harder to maintain.</span>
                   </li>
-                  <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
-                      <X size={14} strokeWidth={3} />
+                  <li className="flex items-start gap-5">
+                    <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-red-100 dark:bg-red-500/10 text-red-600 dark:text-red-500">
+                      <X size={18} strokeWidth={3} />
                     </div>
                     <span>Adding features = adding more static singletons.</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="flex flex-col justify-center gap-6 rounded-2xl bg-white/60 dark:bg-zinc-950/50 p-8 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-md shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
-                    <Check size={24} strokeWidth={3} />
+              <div className="flex flex-col justify-center gap-8 rounded-[2rem] bg-white/60 dark:bg-zinc-950/50 p-10 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-md shadow-lg">
+                <div className="flex items-center gap-5">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">
+                    <Check size={32} strokeWidth={3} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-zinc-900 dark:text-white">The Solution</h3>
-                    <p className="text-sm text-zinc-500 dark:text-zinc-400">Modern Architecture</p>
+                    <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">The Solution</h3>
+                    <p className="text-base text-zinc-500 dark:text-zinc-400">Modern Architecture</p>
                   </div>
                 </div>
-                <p className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
+                <p className="text-xl leading-relaxed text-zinc-700 dark:text-zinc-300">
                   MintyMDT acts as an organizational layer. It separates services, manages lifecycles, and
                   standardizes state without overwhelming the core game logic.
                 </p>
@@ -137,19 +140,19 @@ export default function MintyMDTPage() {
         </section>
 
         {/* Features Grid */}
-        <section className="mb-32">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <section className="mb-40">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, idx) => (
               <div
                 key={idx}
-                className="group relative overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/40 p-8 backdrop-blur-sm transition-all hover:bg-white/60 dark:hover:bg-zinc-800/40 hover:scale-[1.02] shadow-sm hover:shadow-xl">
+                className="group relative overflow-hidden rounded-[2rem] border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/40 p-10 backdrop-blur-sm transition-all hover:bg-white/60 dark:hover:bg-zinc-800/40 hover:scale-[1.02] shadow-sm hover:shadow-2xl hover:shadow-emerald-500/5">
                 <div className="absolute inset-0 bg-linear-to-br from-white/40 to-transparent dark:from-white/5 dark:to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 <div className="relative z-10">
-                  <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-zinc-950 ring-1 ring-zinc-200 dark:ring-white/10 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white dark:bg-zinc-950 ring-1 ring-zinc-200 dark:ring-white/10 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                     {feature.icon}
                   </div>
-                  <h3 className="mb-3 text-xl font-bold text-zinc-900 dark:text-white">{feature.title}</h3>
-                  <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">{feature.description}</p>
+                  <h3 className="mb-4 text-2xl font-bold text-zinc-900 dark:text-white">{feature.title}</h3>
+                  <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">{feature.description}</p>
                 </div>
               </div>
             ))}
@@ -157,20 +160,20 @@ export default function MintyMDTPage() {
         </section>
 
         {/* Comparison Section (Code) */}
-        <section className="mb-32">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div className="order-2 lg:order-1 relative rounded-2xl bg-zinc-900 p-6 shadow-2xl ring-1 ring-zinc-200 dark:ring-white/10 transform transition-transform hover:scale-[1.01] duration-500">
-              <div className="absolute -top-12 -left-12 h-64 w-64 rounded-full bg-purple-500/10 blur-[80px]" />
-              <div className="flex items-center justify-between border-b border-zinc-800 pb-4 mb-4">
-                <div className="flex gap-2">
-                  <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                  <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                  <div className="h-3 w-3 rounded-full bg-green-500/80" />
+        <section className="mb-40">
+          <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <div className="order-2 lg:order-1 relative rounded-[2rem] bg-zinc-900 p-8 shadow-2xl ring-1 ring-zinc-200 dark:ring-white/10 transform transition-transform hover:scale-[1.01] duration-500">
+              <div className="absolute -top-16 -left-16 h-80 w-80 rounded-full bg-purple-500/10 blur-[100px]" />
+              <div className="relative z-10 flex items-center justify-between border-b border-zinc-800 pb-6 mb-6">
+                <div className="flex gap-3">
+                  <div className="h-3.5 w-3.5 rounded-full bg-red-500/80" />
+                  <div className="h-3.5 w-3.5 rounded-full bg-yellow-500/80" />
+                  <div className="h-3.5 w-3.5 rounded-full bg-green-500/80" />
                 </div>
-                <span className="text-xs font-mono text-zinc-500">PlayerService.java</span>
+                <span className="text-sm font-mono text-zinc-500">PlayerService.java</span>
               </div>
 
-              <pre className="overflow-x-auto text-sm font-mono leading-relaxed">
+              <pre className="relative z-10 overflow-x-auto text-sm font-mono leading-loose">
                 <code className="text-zinc-300">
                   <span className="text-[#ff7b72]">public</span> <span className="text-[#ff7b72]">class</span>{" "}
                   <span className="text-[#d2a8ff]">PlayerService</span>{" "}
@@ -213,31 +216,31 @@ export default function MintyMDTPage() {
               </pre>
             </div>
 
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-10">
               <div>
-                <h2 className="text-4xl font-bold text-zinc-900 dark:text-white mb-4">
+                <h2 className="text-5xl font-bold text-zinc-900 dark:text-white mb-6">
                   Paradigm Shift: <br />
                   <span className="text-purple-600 dark:text-purple-400">Dependency Injection</span>
                 </h2>
-                <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
                   Stop calling{" "}
-                  <code className="rounded bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 text-zinc-700 dark:text-zinc-300 text-sm font-mono">
+                  <code className="rounded bg-zinc-100 dark:bg-zinc-800 px-2 py-1 text-zinc-700 dark:text-zinc-300 text-base font-mono">
                     Vars.xxx
                   </code>{" "}
                   globally. With MintyMDT, every service requests exactly what it needs.
                 </p>
               </div>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="rounded-xl bg-white/50 dark:bg-zinc-900/50 p-4 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
-                  <h4 className="font-bold text-zinc-900 dark:text-white mb-2">Testability</h4>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="rounded-2xl bg-white/50 dark:bg-zinc-900/50 p-6 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
+                  <h4 className="text-lg font-bold text-zinc-900 dark:text-white mb-3">Testability</h4>
+                  <p className="text-base text-zinc-600 dark:text-zinc-400">
                     Mock dependencies effortlessly. Unit test your logic without booting up the entire game server.
                   </p>
                 </div>
-                <div className="rounded-xl bg-white/50 dark:bg-zinc-900/50 p-4 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
-                  <h4 className="font-bold text-zinc-900 dark:text-white mb-2">Clarity</h4>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                <div className="rounded-2xl bg-white/50 dark:bg-zinc-900/50 p-6 ring-1 ring-zinc-200 dark:ring-white/5 backdrop-blur-sm">
+                  <h4 className="text-lg font-bold text-zinc-900 dark:text-white mb-3">Clarity</h4>
+                  <p className="text-base text-zinc-600 dark:text-zinc-400">
                     Constructor signatures tell you exactly what a component does and what it touches.
                   </p>
                 </div>
@@ -247,33 +250,33 @@ export default function MintyMDTPage() {
         </section>
 
         {/* Comparison Table */}
-        <section className="mb-24 overflow-hidden rounded-3xl border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/30 backdrop-blur-sm">
+        <section className="mb-40 overflow-hidden rounded-[3rem] border border-zinc-200 dark:border-white/5 bg-white/40 dark:bg-zinc-900/30 backdrop-blur-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
                 <tr className="border-b border-zinc-200 dark:border-white/5 bg-white/50 dark:bg-white/5">
-                  <th className="p-6 text-lg font-bold text-red-500 dark:text-red-400 w-1/2">Vanilla Mindustry</th>
-                  <th className="p-6 text-lg font-bold text-emerald-600 dark:text-emerald-400 w-1/2">
+                  <th className="p-8 text-xl font-bold text-red-500 dark:text-red-400 w-1/2">Vanilla Mindustry</th>
+                  <th className="p-8 text-xl font-bold text-emerald-600 dark:text-emerald-400 w-1/2">
                     MintyMDT v3
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-zinc-200 dark:divide-white/5">
                 <tr>
-                  <td className="p-6 text-zinc-600 dark:text-zinc-400">Boilerplate Heavy</td>
-                  <td className="p-6 font-medium text-zinc-900 dark:text-white">Anti-boilerplate</td>
+                  <td className="p-8 text-lg text-zinc-600 dark:text-zinc-400">Boilerplate Heavy</td>
+                  <td className="p-8 text-lg font-medium text-zinc-900 dark:text-white">Anti-boilerplate</td>
                 </tr>
                 <tr>
-                  <td className="p-6 text-zinc-600 dark:text-zinc-400">Global Static State</td>
-                  <td className="p-6 font-medium text-zinc-900 dark:text-white">Scope-managed DI</td>
+                  <td className="p-8 text-lg text-zinc-600 dark:text-zinc-400">Global Static State</td>
+                  <td className="p-8 text-lg font-medium text-zinc-900 dark:text-white">Scope-managed DI</td>
                 </tr>
                 <tr>
-                  <td className="p-6 text-zinc-600 dark:text-zinc-400">Tangled Logic</td>
-                  <td className="p-6 font-medium text-zinc-900 dark:text-white">Decoupled Services</td>
+                  <td className="p-8 text-lg text-zinc-600 dark:text-zinc-400">Tangled Logic</td>
+                  <td className="p-8 text-lg font-medium text-zinc-900 dark:text-white">Decoupled Services</td>
                 </tr>
                 <tr>
-                  <td className="p-6 text-zinc-600 dark:text-zinc-400">Hard to Scale</td>
-                  <td className="p-6 font-medium text-zinc-900 dark:text-white">Scalable Architecture</td>
+                  <td className="p-8 text-lg text-zinc-600 dark:text-zinc-400">Hard to Scale</td>
+                  <td className="p-8 text-lg font-medium text-zinc-900 dark:text-white">Scalable Architecture</td>
                 </tr>
               </tbody>
             </table>
