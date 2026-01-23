@@ -31,7 +31,7 @@ export default function AboutNekoPage() {
         {/* Section: Identity */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 fill-mode-both">
           <div className="space-y-4 border-l-2 border-primary/20 pl-6 h-full">
-            <span className="block text-primary text-[10px] uppercase tracking-[0.2em] font-bold mb-4">
+            <span className="block text-primary text-xxs uppercase tracking-widest-2xl font-bold mb-4">
               Identity Protocol
             </span>
             <p className="text-lg font-medium text-foreground">Builder / Maintainer / System Thinker</p>
@@ -40,7 +40,7 @@ export default function AboutNekoPage() {
             </p>
           </div>
           <div className="space-y-4 border-l-2 border-primary/20 pl-6 h-full">
-            <span className="block text-primary text-[10px] uppercase tracking-[0.2em] font-bold mb-4">
+            <span className="block text-primary text-xxs uppercase tracking-widest-2xl font-bold mb-4">
               Core Focus
             </span>
             <ul className="space-y-2 text-muted-foreground">
@@ -103,7 +103,7 @@ export default function AboutNekoPage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             <div className="relative p-6 rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 bg-white/5 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-zinc-800/20 transition-all duration-300">
-              <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-muted-foreground/50">
+              <span className="absolute top-4 right-4 text-xxs uppercase tracking-widest text-muted-foreground/50">
                 Service
               </span>
               <h3 className="text-xl font-medium mb-3">Nekodustry</h3>
@@ -113,7 +113,7 @@ export default function AboutNekoPage() {
             </div>
 
             <div className="relative p-6 rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 bg-white/5 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-zinc-800/20 transition-all duration-300">
-              <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-muted-foreground/50">
+              <span className="absolute top-4 right-4 text-xxs uppercase tracking-widest text-muted-foreground/50">
                 Community
               </span>
               <h3 className="text-xl font-medium mb-3">Mindustry Tool</h3>
@@ -123,7 +123,7 @@ export default function AboutNekoPage() {
             </div>
 
             <div className="relative p-6 rounded-lg border border-zinc-200/50 dark:border-zinc-800/50 bg-white/5 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-zinc-800/20 transition-all duration-300">
-              <span className="absolute top-4 right-4 text-[10px] uppercase tracking-widest text-muted-foreground/50">
+              <span className="absolute top-4 right-4 text-xxs uppercase tracking-widest text-muted-foreground/50">
                 Operator
               </span>
               <h3 className="text-xl font-medium mb-3">Me</h3>

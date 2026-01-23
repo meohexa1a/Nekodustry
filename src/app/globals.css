@@ -159,3 +159,7 @@
 @utility leading-tighter {
   line-height: 1.1;
 }
+
+@utility tracking-widest-3xl {
+  letter-spacing: 0.5em;
+}

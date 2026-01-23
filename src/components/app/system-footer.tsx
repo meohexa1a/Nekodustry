@@ -26,7 +26,7 @@ interface StatusIndicatorProps {
 
 function StatusIndicator({ label, value, className, active = true }: StatusIndicatorProps) {
   return (
-    <div className={cn("flex flex-col gap-1 font-mono text-[10px]", className)}>
+    <div className={cn("flex flex-col gap-1 font-mono text-xxs", className)}>
       <span className="text-muted-foreground uppercase tracking-wider">{label}</span>
       <div className="flex items-center gap-2 text-primary">
         {active && <span className="h-1.5 w-1.5 rounded-full bg-status-success/80 animate-pulse" />}
@@ -66,7 +66,7 @@ export function SystemFooter() {
 
         {/* Column 4: Legal / Protocol */}
         <div className="space-y-4">
-          <div className="font-mono text-[10px] text-muted-foreground uppercase tracking-wider">Protocol</div>
+          <div className="font-mono text-xxs text-muted-foreground uppercase tracking-wider">Protocol</div>
           <div className="text-xs text-muted-foreground font-mono space-y-2">
             <p>MIT Licensed</p>
             <p>Community Operated</p>
@@ -75,7 +75,7 @@ export function SystemFooter() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="flex justify-between items-center py-6 border-t border-border/50 text-[10px] text-muted-foreground font-mono uppercase tracking-widest">
+      <div className="flex justify-between items-center py-6 border-t border-border/50 text-xxs text-muted-foreground font-mono uppercase tracking-widest">
         <span>© 2026 Nekodustry Network</span>
         <Clock />
       </div>

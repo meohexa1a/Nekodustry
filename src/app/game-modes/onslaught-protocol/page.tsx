@@ -11,7 +11,7 @@ export default function OnslaughtProtocolPage() {
         <div className="border-l-4 border-red-600 pl-8 mb-12">
           <div className="flex items-center gap-3 text-red-600 dark:text-red-500 mb-2">
             <Activity className="animate-pulse" />
-            <span className="tracking-[0.5em] text-sm font-bold uppercase">System Status: Development</span>
+            <span className="tracking-widest-3xl text-sm font-bold uppercase">System Status: Development</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none text-foreground">
             Onslaught
