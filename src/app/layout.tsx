@@ -7,6 +7,7 @@ import { AppSidebar } from "@/components/app/app-sidebar";
 import { AppNavbar } from "@/components/app/app-navbar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import React from "react";
+import { AppFooter } from "@/components/app/app-footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <AppNavbar />
 
                 <div className="flex-1">{children}</div>
+                <AppFooter />
               </main>
             </div>
           </SidebarProvider>

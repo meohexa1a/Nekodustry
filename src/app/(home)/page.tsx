@@ -1,5 +1,4 @@
 import { AbstractBackground } from "@/components/app/abstract-background";
-import { SystemFooter } from "@/components/app/system-footer";
 import Link from "next/link";
 import { ArrowRight, Layers, LayoutDashboard, Calendar, Gamepad2 } from "lucide-react";
 
@@ -88,7 +87,6 @@ export default function Home() {
         <GatewayLinks />
       </div>
 
-      <SystemFooter />
     </div>
   );
 }

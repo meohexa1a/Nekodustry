@@ -2,7 +2,6 @@
 
 import { Layers, Zap, Code, Feather, GitBranch, ArrowRight, X, Check, Package, Server } from "lucide-react";
 import { AbstractBackground } from "@/components/app/abstract-background";
-import { SystemFooter } from "@/components/app/system-footer";
 
 export default function MintyMDTPage() {
   const features = [
@@ -281,8 +280,6 @@ export default function MintyMDTPage() {
         </section>
       </div>
 
-      {/* Footer Integration */}
-      <SystemFooter />
     </div>
   );
 }

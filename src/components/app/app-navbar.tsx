@@ -4,7 +4,7 @@ import { ModeToggle } from "@/components/theme/mode-toggle";
 
 export function AppNavbar() {
   return (
-    <header
+    <nav
       className="mx-auto sticky top-0 z-50 flex h-12 w-full items-center gap-2 
         backdrop-blur-sm transition-all ease-linear supports-backdrop-filter:bg-background/60 max-w-5xl
         rounded-none lg:rounded-b-xl border">
@@ -18,6 +18,6 @@ export function AppNavbar() {
           <ModeToggle />
         </div>
       </div>
-    </header>
+    </nav>
   );
 }

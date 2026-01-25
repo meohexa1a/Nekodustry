@@ -1,6 +1,4 @@
-import React from "react";
 import type { Metadata } from "next";
-import { SystemFooter } from "@/components/app/system-footer";
 import { AbstractBackground } from "@/components/app/abstract-background";
 
 export const metadata: Metadata = {
@@ -163,7 +161,6 @@ export default function AboutNekoPage() {
         </section>
       </div>
 
-      <SystemFooter />
     </main>
   );
 }
