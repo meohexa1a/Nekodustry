@@ -1,6 +1,12 @@
 import { AbstractBackground } from "@/components/app/abstract-background";
 import Link from "next/link";
-import { ArrowRight, Layers, LayoutDashboard, Calendar, Gamepad2 } from "lucide-react";
+import {
+  ArrowRight,
+  Layers,
+  LayoutDashboard,
+  Calendar,
+  Gamepad2,
+} from "lucide-react";
 
 function HeroSection() {
   return (
@@ -15,13 +21,17 @@ function HeroSection() {
 
           <h1 className="max-w-4xl text-5xl font-light leading-tighter tracking-tight text-foreground sm:text-7xl lg:text-8xl">
             Experimental <br />
-            <span className="font-serif italic text-muted-foreground">Ecosystem</span>
+            <span className="font-serif italic text-muted-foreground">
+              Ecosystem
+            </span>
           </h1>
         </div>
 
         <p className="max-w-xl text-lg font-light leading-relaxed text-muted-foreground sm:text-xl">
           Nekodustry provides systems, not direction.
-          <span className="block mt-4 opacity-70">Structure for the community to inhibit.</span>
+          <span className="block mt-4 opacity-70">
+            Structure for the community to inhibit.
+          </span>
         </p>
       </div>
     </section>
@@ -45,7 +55,9 @@ function NodeLink({ href, title, subtitle, icon: Icon }: NodeLinkProps) {
           </div>
           <div>
             <h3 className="font-mono text-lg text-foreground">{title}</h3>
-            <p className="text-sm font-light text-muted-foreground">{subtitle}</p>
+            <p className="text-sm font-light text-muted-foreground">
+              {subtitle}
+            </p>
           </div>
         </div>
         <ArrowRight className="text-muted-foreground transition-transform duration-300 group-hover:-translate-x-2 group-hover:text-foreground" />
@@ -62,9 +74,24 @@ function GatewayLinks() {
           Available Service Nodes
         </div>
 
-        <NodeLink href="/" title="Dashboard" subtitle="Operational overview" icon={LayoutDashboard} />
-        <NodeLink href="/events" title="Events" subtitle="Managed temporal services" icon={Calendar} />
-        <NodeLink href="/mintymdt" title="MintyMDT" subtitle="Framework service integration" icon={Layers} />
+        <NodeLink
+          href="/"
+          title="Dashboard"
+          subtitle="Operational overview"
+          icon={LayoutDashboard}
+        />
+        <NodeLink
+          href="/events"
+          title="Events"
+          subtitle="Managed temporal services"
+          icon={Calendar}
+        />
+        <NodeLink
+          href="/mintymdt"
+          title="MintyMDT"
+          subtitle="Framework service integration"
+          icon={Layers}
+        />
         <NodeLink
           href="/game-modes/common"
           title="Game Modes"
@@ -86,7 +113,6 @@ export default function Home() {
         <HeroSection />
         <GatewayLinks />
       </div>
-
     </div>
   );
 }

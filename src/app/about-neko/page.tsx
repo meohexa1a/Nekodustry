@@ -20,9 +20,12 @@ export default function AboutNekoPage() {
           </span>
           <div className="space-y-4 text-3xl md:text-5xl font-light tracking-tight leading-tight">
             <h1 className="text-foreground">
-              Hi, I'm <span className="font-medium text-primary">meohexa1a</span>.
+              Hi, I'm{" "}
+              <span className="font-medium text-primary">meohexa1a</span>.
             </h1>
-            <p className="text-muted-foreground/80 text-2xl md:text-4xl">I am a builder and system maintainer.</p>
+            <p className="text-muted-foreground/80 text-2xl md:text-4xl">
+              I am a builder and system maintainer.
+            </p>
           </div>
         </header>
 
@@ -32,9 +35,12 @@ export default function AboutNekoPage() {
             <span className="block text-primary text-xxs uppercase tracking-widest-2xl font-bold mb-4">
               Identity Protocol
             </span>
-            <p className="text-lg font-medium text-foreground">Builder / Maintainer / System Thinker</p>
+            <p className="text-lg font-medium text-foreground">
+              Builder / Maintainer / System Thinker
+            </p>
             <p className="text-muted-foreground">
-              I am not a representative. I prefer infrastructure over the spotlight.
+              I am not a representative. I prefer infrastructure over the
+              spotlight.
             </p>
           </div>
           <div className="space-y-4 border-l-2 border-primary/20 pl-6 h-full">
@@ -64,8 +70,8 @@ export default function AboutNekoPage() {
                 Abstraction over implementation
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                I view every project as a system problem. Prioritizing service layer over features, abstraction
-                over premature optimization.
+                I view every project as a system problem. Prioritizing service
+                layer over features, abstraction over premature optimization.
               </p>
             </div>
 
@@ -74,8 +80,8 @@ export default function AboutNekoPage() {
                 Service over authority
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Systems should serve, not rule. If infrastructure attracts too much attention, it fails to be
-                invisible.
+                Systems should serve, not rule. If infrastructure attracts too
+                much attention, it fails to be invisible.
               </p>
             </div>
 
@@ -84,7 +90,8 @@ export default function AboutNekoPage() {
                 Design for replacement
               </h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Everything I build is designed to be replaceable — including myself.
+                Everything I build is designed to be replaceable — including
+                myself.
               </p>
             </div>
           </div>
@@ -106,7 +113,8 @@ export default function AboutNekoPage() {
               </span>
               <h3 className="text-xl font-medium mb-3">Nekodustry</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Provides infrastructure, framework, and operations. Does not define community meaning.
+                Provides infrastructure, framework, and operations. Does not
+                define community meaning.
               </p>
             </div>
 
@@ -160,7 +168,6 @@ export default function AboutNekoPage() {
           </ul>
         </section>
       </div>
-
     </main>
   );
 }
