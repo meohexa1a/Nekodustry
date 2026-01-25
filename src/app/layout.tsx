@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
+import { AppNavbar } from "@/components/app/app-navbar";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import React from "react";
 
@@ -31,12 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex w-full">
               <AppSidebar />
 
-              <main className="relative flex-1 w-full min-h-screen">
-                <div className="sticky left-0 top-0 w-fit p-2 z-50">
-                  <SidebarTrigger />
-                </div>
+              <main className="relative flex-1 w-full min-h-screen flex flex-col">
+                <AppNavbar />
 
-                {children}
+                <div className="flex-1">{children}</div>
               </main>
             </div>
           </SidebarProvider>
