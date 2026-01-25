@@ -29,8 +29,12 @@ export function SystemFooter() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 py-12">
         {/* Column 1: Identity */}
         <div className="space-y-4">
-          <div className="font-mono font-bold text-sm tracking-tighter text-zinc-900 dark:text-zinc-100">NEKODUSTRY_SYS</div>
-          <p className="text-xs text-zinc-500 max-w-[200px] leading-relaxed">Infrastructure provisioning and service management layer for the Mindustry Tool ecosystem.</p>
+          <div className="font-mono font-bold text-sm tracking-tighter text-zinc-900 dark:text-zinc-100">
+            NEKODUSTRY_SYS
+          </div>
+          <p className="text-xs text-zinc-500 max-w-[200px] leading-relaxed">
+            Infrastructure provisioning and service management layer for the Mindustry Tool ecosystem.
+          </p>
         </div>
 
         {/* Column 2: System Status */}

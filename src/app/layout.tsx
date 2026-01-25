@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app/app-sidebar";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import React from "react";
 
 const geistSans = Geist({
@@ -17,27 +18,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nekodustry",
+  title: "Nekodustry Portal",
   description: "MintyMDT Game Server Software & Mindustry Tool collaboration, and more",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <SidebarProvider>
-          <div className="flex min-w-screen min-h-screen">
-            <AppSidebar />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <SidebarProvider>
+            <div className="flex w-full">
+              <AppSidebar />
 
-            <main className="relative flex-1">
-              <div className="sticky left-0 top-0 p-2 z-50">
-                <SidebarTrigger />
-              </div>
+              <main className="relative flex-1 w-full min-h-screen">
+                <div className="sticky left-0 top-0 w-fit p-2 z-50">
+                  <SidebarTrigger />
+                </div>
 
-              {children}
-            </main>
-          </div>
-        </SidebarProvider>
+                {children}
+              </main>
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

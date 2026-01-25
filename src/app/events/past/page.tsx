@@ -15,14 +15,15 @@ export default function PastEventsPage() {
 
         <Link
           href="#"
-          className="block rounded-[2rem] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/50 p-8 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
-        >
+          className="block rounded-[2rem] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/50 p-8 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
             <div>
               <h3 className="text-lg font-bold">Winter Championship 2025</h3>
               <p className="text-sm text-muted-foreground">Ended on Dec 31, 2025</p>
             </div>
-            <div className="px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm font-medium">Winner: Team Neko</div>
+            <div className="px-4 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-sm font-medium">
+              Winner: Team Neko
+            </div>
           </div>
         </Link>
       </div>

@@ -40,7 +40,9 @@ export default function EventsPage() {
             <Calendar className="text-primary" size={40} />
             Events Hub
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl">Join the community. Compete in tournaments. Check out what's coming next.</p>
+          <p className="text-xl text-muted-foreground max-w-2xl">
+            Join the community. Compete in tournaments. Check out what's coming next.
+          </p>
         </header>
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -48,9 +50,9 @@ export default function EventsPage() {
             <Link
               href={category.href}
               key={idx}
-              className={`group relative flex flex-col p-8 rounded-[2.5rem] border ${category.border} bg-card hover:bg-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
-            >
-              <div className={`mb-6 h-16 w-16 rounded-2xl ${category.bg} flex items-center justify-center ${category.color}`}>
+              className={`group relative flex flex-col p-8 rounded-[2.5rem] border ${category.border} bg-card hover:bg-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}>
+              <div
+                className={`mb-6 h-16 w-16 rounded-2xl ${category.bg} flex items-center justify-center ${category.color}`}>
                 <category.icon size={32} />
               </div>
 
