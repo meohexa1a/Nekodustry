@@ -1,5 +1,4 @@
 import { Crosshair, Skull, Activity, Cpu } from "lucide-react";
-import { SystemFooter } from "@/components/app/system-footer";
 
 export default function OnslaughtProtocolPage() {
   return (
@@ -78,7 +77,6 @@ export default function OnslaughtProtocolPage() {
           </div>
         </div>
       </div>
-      <SystemFooter />
     </div>
   );
 }

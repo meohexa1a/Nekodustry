@@ -1,5 +1,4 @@
 import { HandMetal, Trophy, Users, Zap, Sword } from "lucide-react";
-import { SystemFooter } from "@/components/app/system-footer";
 
 export default function CataliIoPage() {
   return (
@@ -60,7 +59,6 @@ export default function CataliIoPage() {
           </div>
         </div>
       </div>
-      <SystemFooter />
     </div>
   );
 }
