@@ -29,10 +29,12 @@ export default function ScheduledEventsPage() {
             <Link
               href={`/events/${event.slug}`}
               key={idx}
-              className="group flex flex-col overflow-hidden rounded-[2rem] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/50 transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className={`h-32 bg-gradient-to-br ${event.color === "red" ? "from-red-500 to-orange-600" : "from-zinc-400 to-zinc-600"} p-6 flex items-start justify-between`}>
-                <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">{event.type}</span>
+              className="group flex flex-col overflow-hidden rounded-[2rem] border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-900/50 transition-all hover:-translate-y-1 hover:shadow-lg">
+              <div
+                className={`h-32 bg-gradient-to-br ${event.color === "red" ? "from-red-500 to-orange-600" : "from-zinc-400 to-zinc-600"} p-6 flex items-start justify-between`}>
+                <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
+                  {event.type}
+                </span>
                 <Trophy size={20} className="text-white/50" />
               </div>
               <div className="flex flex-1 flex-col p-6">

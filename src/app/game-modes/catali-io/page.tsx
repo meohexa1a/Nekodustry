@@ -16,7 +16,7 @@ export default function CataliIoPage() {
               </span>
             </div>
 
-            <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 drop-shadow-sm dark:drop-shadow-2xl">
+            <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 drop-shadow-sm dark:drop-shadow-2xl">
               catali.io
             </h1>
 

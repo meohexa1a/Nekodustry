@@ -5,7 +5,7 @@ export default function OnslaughtProtocolPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground font-mono selection:bg-red-600 selection:text-white relative transition-colors duration-300">
       {/* Glitch Overlay Effect - Subtle in light mode, more prominent in dark */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px]"></div>
+      <div className="absolute inset-0 opacity-5 dark:opacity-10 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-size-[100%_4px]"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10 flex-1 flex flex-col justify-center">
         <div className="border-l-4 border-red-600 pl-8 mb-12">
@@ -43,7 +43,7 @@ export default function OnslaughtProtocolPage() {
             </div>
 
             <button className="mt-8 px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold uppercase tracking-widest skew-x-[-10deg] transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(220,38,38,0.3)]">
-              <span className="skew-x-[10deg] inline-block">Join Waitlist</span>
+              <span className="skew-x-10 inline-block">Join Waitlist</span>
             </button>
           </div>
 

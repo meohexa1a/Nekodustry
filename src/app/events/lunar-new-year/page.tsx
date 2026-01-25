@@ -18,7 +18,8 @@ export default function LunarNewYearEventPage() {
         <div className="rounded-2xl bg-zinc-100 dark:bg-zinc-800 p-8 mt-8">
           <h2 className="text-2xl font-semibold mb-4 text-amber-500">Status: Updating</h2>
           <p className="text-zinc-600 dark:text-zinc-400">
-            The details for this event are currently being updated. Please check back later for more information about the Lunar New Year festivities.
+            The details for this event are currently being updated. Please check back later for more information
+            about the Lunar New Year festivities.
           </p>
         </div>
       </div>

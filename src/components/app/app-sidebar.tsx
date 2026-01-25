@@ -15,6 +15,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarFooter,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Settings } from "lucide-react";
 
@@ -50,10 +51,10 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar collapsible="icon" className="border-r border-foreground/50">
-      <SidebarHeader className="justify-center border-b border-foreground/50 bg-secondary group-data-[collapsible=icon]:hidden">  
-        <div className="flex items-center gap-2">
-          <div className="flex p-1.5 shrink-0 items-center justify-center rounded-md bg-primary text-primary-foreground">
+    <Sidebar collapsible="icon" variant="inset">
+      <SidebarHeader className="justify-center">
+        <div className="flex items-center gap-2 group-data-[collapsible=icon]:hidden">
+          <div className="flex p-1.5 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Rocket size={18} />
           </div>
           <div className="flex flex-col">
@@ -61,6 +62,8 @@ export function AppSidebar() {
             <span className="truncate text-xs text-muted-foreground">Service Portal</span>
           </div>
         </div>
+
+        <SidebarTrigger className="hidden group-data-[collapsible=icon]:flex" />
       </SidebarHeader>
 
       <SidebarContent>
@@ -100,7 +103,7 @@ export function AppSidebar() {
             <SidebarMenuButton
               asChild
               tooltip="Settings"
-              className="h-9 transition-colors duration-200 text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
+              className="transition-colors duration-200 text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
               <Link href="/settings">
                 <Settings />
                 <span>Settings</span>
