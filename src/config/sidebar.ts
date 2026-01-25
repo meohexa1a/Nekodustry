@@ -3,7 +3,7 @@ import { Home, User, Layers, Calendar, CalendarClock, PlayCircle, History, Gamep
 export const sidebarData = {
   navMain: [
     {
-      title: "Dashboard",
+      title: "Home",
       url: "/",
       icon: Home,
     },

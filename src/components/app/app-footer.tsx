@@ -23,24 +23,21 @@ function FooterLink({
 
 export function AppFooter() {
   return (
-    <footer className="relative z-10 mx-4 rounded-t-2xl border px-2 backdrop-blur-sm md:px-6">
-      {/* Grid Pattern Background */}
+    <footer className="relative z-10 mx-4 rounded-t-2xl border backdrop-blur-sm">
       <div className="layout-grid-overlay" />
 
-      {/* Grid Layout */}
-      <div className="relative grid grid-cols-1 gap-12 py-16 md:grid-cols-2 lg:grid-cols-4 lg:gap-16">
-        {/* Column 1: Identity & About */}
+      <div className="relative grid w-full grid-cols-1 gap-6 px-4 py-8 md:grid-cols-2 md:gap-2 md:px-12 lg:grid-cols-4">
         <div className="space-y-6">
           <div className="text-primary flex items-center gap-2">
             <Terminal className="h-5 w-5" />
-            <span className="text-foreground font-mono text-base font-bold tracking-tighter">
+            <span className="text-foreground font-mono text-base tracking-tighter">
               NEKODUSTRY
             </span>
           </div>
 
           <p className="text-muted-foreground font-mono text-xs leading-relaxed">
             Service layer for Nekodustry <br />
-            Server, events, framework, and more!
+            Server game modes, events, framework, and more!
           </p>
 
           <div className="flex gap-3 pt-2">
@@ -50,9 +47,6 @@ export function AppFooter() {
                 href: 'https://github.com/meohexa1a/Nekodustry',
                 label: 'Github',
               },
-              { icon: FaDiscord, href: '#', label: 'Discord' },
-              { icon: FaInstagram, href: '#', label: 'Instagram' },
-              { icon: FaReddit, href: '#', label: 'Reddit' },
             ].map((social, idx) => (
               <a
                 key={idx}
@@ -70,7 +64,7 @@ export function AppFooter() {
 
         {/* Column 2: Mindustry Tool */}
         <div className="space-y-6">
-          <h3 className="text-foreground font-mono text-xs font-bold tracking-widest uppercase">
+          <h3 className="text-foreground font-mono text-xs tracking-widest uppercase">
             Mindustry Tool
           </h3>
           <div className="flex flex-col gap-3">
@@ -83,33 +77,31 @@ export function AppFooter() {
 
         {/* Column 3: Ecosystem */}
         <div className="space-y-6">
-          <h3 className="text-foreground font-mono text-xs font-bold tracking-widest uppercase">
-            Ecosystem
+          <h3 className="text-foreground font-mono text-xs tracking-widest uppercase">
+            Resources
           </h3>
           <div className="flex flex-col gap-3">
-            <FooterLink href="/mintymdt">MintyMDT Framework</FooterLink>
-            <FooterLink href="/game-modes">Game Modes</FooterLink>
-            <FooterLink href="#">Modding Docs</FooterLink>
-            <FooterLink href="#">Asset Library</FooterLink>
+            <FooterLink href="/mintymdt">MintyMDT</FooterLink>
+            <FooterLink href="/game-modes/catali-io">Catali.io</FooterLink>
+            <FooterLink href="/game-modes/onslaught-protocol">
+              Onslaught Protocol
+            </FooterLink>
           </div>
         </div>
 
         {/* Column 4: Project */}
         <div className="space-y-6">
-          <h3 className="text-foreground font-mono text-xs font-bold tracking-widest uppercase">
-            Project
+          <h3 className="text-foreground font-mono text-xs tracking-widest uppercase">
+            Related
           </h3>
           <div className="flex flex-col gap-3">
-            <FooterLink href="/about-neko">About Nekodustry</FooterLink>
-            <FooterLink href="#">Changelog</FooterLink>
-            <FooterLink href="#">Contributing</FooterLink>
-            <FooterLink href="#">Status</FooterLink>
+            <FooterLink href="/about-neko">About Me</FooterLink>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-border/40 bg-muted/5 -mx-6 border-t px-6 md:-mx-12 md:px-12">
+      <div className="border-border/50 bg-muted/5 border-t px-6 md:px-12">
         <div className="text-2xs text-muted-foreground flex flex-col items-center justify-between gap-4 py-6 font-mono tracking-widest md:flex-row">
           <p>
             © 2026 NEKODUSTRY. Made with{' '}
