@@ -12,7 +12,7 @@ export default function AboutNekoPage() {
       {/* Reusing Home Page Background for consistency and depth */}
       <AbstractBackground />
 
-      <div className="relative z-10 mx-auto max-w-4xl space-y-32 px-6 py-24 md:py-32">
+      <div className="relative mx-auto max-w-4xl space-y-32 px-6 py-24 md:py-32">
         {/* Header / Identity */}
         <header className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both space-y-8 duration-1000">
           <span className="text-muted-foreground inline-block text-xs font-semibold tracking-widest uppercase opacity-50">

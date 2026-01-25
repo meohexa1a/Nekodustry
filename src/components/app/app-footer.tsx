@@ -23,7 +23,7 @@ function FooterLink({
 
 export function AppFooter() {
   return (
-    <footer className="bg-background/50 relative z-10 mx-4 rounded-t-2xl border border-b-0 backdrop-blur-sm">
+    <footer className="bg-background/50 relative mx-4 rounded-t-2xl border border-b-0 backdrop-blur-sm">
       <div className="layout-grid-overlay" />
 
       <div className="relative grid w-full grid-cols-1 gap-10 px-6 py-12 md:grid-cols-2 md:px-12 lg:grid-cols-9 lg:gap-4">

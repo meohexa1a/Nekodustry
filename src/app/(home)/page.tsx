@@ -109,7 +109,7 @@ export default function Home() {
       <AbstractBackground />
 
       {/* Nội dung chính */}
-      <div className="relative z-10 flex flex-col gap-12 pb-32 sm:gap-24">
+      <div className="relative flex flex-col gap-12 pb-32 sm:gap-24">
         <HeroSection />
         <GatewayLinks />
       </div>
