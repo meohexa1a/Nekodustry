@@ -16,6 +16,7 @@ import {
   SidebarMenuButton,
   SidebarFooter,
   SidebarTrigger,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { Settings } from "lucide-react";
 
@@ -51,9 +52,9 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar collapsible="icon" variant="inset">
-      <SidebarHeader className="justify-center">
-        <div className="flex items-center gap-2 group-data-[collapsible=icon]:hidden">
+    <Sidebar collapsible="icon" variant="floating">
+      <SidebarHeader className="justify-center group-data-[collapsible=icon]:hidden">
+        <div className="flex items-center gap-2">
           <div className="flex p-1.5 items-center justify-center rounded-md bg-primary text-primary-foreground">
             <Rocket size={18} />
           </div>
@@ -62,8 +63,6 @@ export function AppSidebar() {
             <span className="truncate text-xs text-muted-foreground">Service Portal</span>
           </div>
         </div>
-
-        <SidebarTrigger className="hidden group-data-[collapsible=icon]:flex" />
       </SidebarHeader>
 
       <SidebarContent>
