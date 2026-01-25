@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowRight, ArrowUpRight, GitCommitHorizontal } from 'lucide-react'
 import { AbstractBackground } from '@/components/app/abstract-background'
 
 export const metadata: Metadata = {
@@ -8,23 +10,19 @@ export const metadata: Metadata = {
 
 export default function AboutNekoPage() {
   return (
-    <main className="selection:bg-primary/20 selection:text-primary relative min-h-screen w-full overflow-hidden bg-transparent font-mono">
-      {/* Reusing Home Page Background for consistency and depth */}
+    <div className="relative w-full font-mono">
       <AbstractBackground />
 
       <div className="relative mx-auto max-w-4xl space-y-32 px-6 py-24 md:py-32">
-        {/* Header / Identity */}
         <header className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both space-y-8 duration-1000">
-          <span className="text-muted-foreground inline-block text-xs font-semibold tracking-widest uppercase opacity-50">
-            // about_me
-          </span>
           <div className="space-y-4 text-3xl leading-tight font-light tracking-tight md:text-5xl">
-            <h1 className="text-foreground">
+            <h1 className="text-muted-foreground">
               Hi, I'm{' '}
               <span className="text-primary font-medium">meohexa1a</span>.
             </h1>
-            <p className="text-muted-foreground/80 text-2xl md:text-4xl">
-              I am a builder and system maintainer.
+            <p className="text-muted-foreground text-2xl md:text-4xl">
+              I build and operate systems that are meant to outlive their
+              builders.
             </p>
           </div>
         </header>
@@ -39,8 +37,8 @@ export default function AboutNekoPage() {
               Builder / Maintainer / System Thinker
             </p>
             <p className="text-muted-foreground">
-              I am not a representative. I prefer infrastructure over the
-              spotlight.
+              This role exists to design, operate, and eventually step away from
+              systems without causing structural collapse.
             </p>
           </div>
           <div className="border-primary/20 h-full space-y-4 border-l-2 pl-6">
@@ -48,9 +46,9 @@ export default function AboutNekoPage() {
               Core Focus
             </span>
             <ul className="text-muted-foreground space-y-2">
-              <li>Sustainable systems.</li>
-              <li>Replaceability.</li>
-              <li>Minimal individual dependency.</li>
+              <li>Sustainable systems over short-term velocity.</li>
+              <li>Replaceability as a first-class constraint.</li>
+              <li>Minimal dependency on any single individual.</li>
             </ul>
           </div>
         </section>
@@ -60,7 +58,7 @@ export default function AboutNekoPage() {
           <div className="flex items-center gap-4">
             <div className="bg-border h-px max-w-[50px] flex-1" />
             <h2 className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
-              // how_i_think
+              // system_design_principles
             </h2>
           </div>
 
@@ -70,8 +68,9 @@ export default function AboutNekoPage() {
                 Abstraction over implementation
               </h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                I view every project as a system problem. Prioritizing service
-                layer over features, abstraction over premature optimization.
+                Every project is treated as a system first, a feature set
+                second. Service boundaries and abstraction layers are
+                prioritized over early optimization.
               </p>
             </div>
 
@@ -80,8 +79,8 @@ export default function AboutNekoPage() {
                 Service over authority
               </h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                Systems should serve, not rule. If infrastructure attracts too
-                much attention, it fails to be invisible.
+                Infrastructure exists to serve, not to rule. If a system
+                attracts attention to itself, it has failed to remain invisible.
               </p>
             </div>
 
@@ -90,8 +89,8 @@ export default function AboutNekoPage() {
                 Design for replacement
               </h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                Everything I build is designed to be replaceable — including
-                myself.
+                All components are designed with the assumption that they will
+                be replaced — including the operator.
               </p>
             </div>
           </div>
@@ -102,72 +101,148 @@ export default function AboutNekoPage() {
           <div className="flex items-center gap-4">
             <div className="bg-border h-px max-w-[50px] flex-1" />
             <h2 className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
-              // ecosystem_context
+              // runtime_topology
             </h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             <div className="relative rounded-lg border border-zinc-200/50 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 dark:border-zinc-800/50 dark:hover:bg-zinc-800/20">
-              <span className="text-xxs text-muted-foreground/50 absolute top-4 right-4 tracking-widest uppercase">
+              <span className="text-muted-foreground/50 absolute top-2 right-2 text-xs tracking-widest uppercase">
                 Service
               </span>
               <h3 className="mb-3 text-xl font-medium">Nekodustry</h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                Provides infrastructure, framework, and operations. Does not
-                define community meaning.
+                Provides infrastructure, framework, and operational substrate.
+                Does not define culture, identity, or community direction.
               </p>
             </div>
 
             <div className="relative rounded-lg border border-zinc-200/50 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 dark:border-zinc-800/50 dark:hover:bg-zinc-800/20">
-              <span className="text-xxs text-muted-foreground/50 absolute top-4 right-4 tracking-widest uppercase">
+              <span className="text-muted-foreground/50 absolute top-2 right-2 text-xs tracking-widest uppercase">
                 Community
               </span>
               <h3 className="mb-3 text-xl font-medium">Mindustry Tool</h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                Where culture, voice, and representation are formed.
+                Where culture, voice, and representation naturally emerge on top
+                of the provided infrastructure.
               </p>
             </div>
 
             <div className="relative rounded-lg border border-zinc-200/50 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 dark:border-zinc-800/50 dark:hover:bg-zinc-800/20">
-              <span className="text-xxs text-muted-foreground/50 absolute top-4 right-4 tracking-widest uppercase">
+              <span className="text-muted-foreground/50 absolute top-2 right-2 text-xs tracking-widest uppercase">
                 Operator
               </span>
               <h3 className="mb-3 text-xl font-medium">Me</h3>
               <p className="text-muted-foreground text-xs leading-relaxed">
-                Operating Nekodustry. Speaking for myself, not the community.
+                Operates and maintains the system. Speaks only for personal
+                decisions, never on behalf of the ecosystem.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Section: Anti-goals */}
         <section className="animate-in fade-in slide-in-from-bottom-8 fill-mode-both space-y-8 delay-700 duration-1000">
           <div className="flex items-center gap-4">
             <div className="bg-border h-px max-w-[50px] flex-1" />
             <h2 className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
-              // null_pointers (avoid)
+              // engineering_contributions
             </h2>
           </div>
-          <ul className="text-muted-foreground grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
-            <li className="flex items-center gap-3">
-              <span className="bg-destructive/50 h-1.5 w-1.5 rounded-full" />
-              No hype-chasing or marketing.
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="bg-destructive/50 h-1.5 w-1.5 rounded-full" />
-              Not "official", not a representative.
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="bg-destructive/50 h-1.5 w-1.5 rounded-full" />
-              No promising long-term roadmaps.
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="bg-destructive/50 h-1.5 w-1.5 rounded-full" />
-              No personal branding.
-            </li>
-          </ul>
+
+          <div className="grid gap-4">
+            <ProjectLog
+              href="/mintymdt"
+              name="MintyMDT"
+              role="Lead Architect"
+              action="Designing the DI container & Service Layer."
+              detail="Decoupling infrastructure from logic to ensure the framework remains stable while game content evolves."
+            />
+
+            <ProjectLog
+              href="/game-modes/catali-io"
+              name="Catali"
+              role="Maintainer"
+              action="Refactored legacy logic to v2 API."
+              detail="Eliminated technical debt by rewriting the core loop, enforcing strict state management standards."
+            />
+
+            <ProjectLog
+              href="/game-modes/ranked"
+              name="Ranked"
+              role="Game Mode Designer"
+              action="Designing a deterministic 1v1 competitive game mode."
+              detail="Focused on fairness, clear win conditions, and minimizing systemic variance in player outcomes."
+            />
+
+            <ProjectLog
+              href="/game-modes/onslaught-protocol"
+              name="Onslaught Protocol"
+              role="Systems Researcher"
+              action="Exploring high-complexity PvE system design."
+              detail="Used to experiment with layered mechanics, scaling difficulty, and long-term balance under system pressure."
+            />
+          </div>
         </section>
       </div>
-    </main>
+    </div>
+  )
+}
+
+function ProjectLog({
+  href,
+  name,
+  role,
+  action,
+  detail,
+}: {
+  href: string
+  name: string
+  role: string
+  action: string
+  detail: string
+}) {
+  return (
+    <Link
+      href={href}
+      className="group bg-background/40 hover:bg-background/80 border-border/40 hover:border-primary/50 relative block w-full rounded-lg border p-6 transition-all duration-300"
+    >
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
+        {/* Icon & Connector line visual */}
+        <div className="hidden flex-col items-center gap-2 sm:flex">
+          <div className="bg-primary/10 text-primary flex h-8 w-8 items-center justify-center rounded-full">
+            <GitCommitHorizontal size={16} />
+          </div>
+          <div className="bg-border/50 h-full w-px" />
+        </div>
+
+        <div className="flex-1 space-y-2">
+          {/* Header */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <h3 className="text-foreground text-lg font-medium tracking-tight">
+                {name}
+              </h3>
+              <span className="text-muted-foreground/60 text-xs font-light tracking-wider uppercase">
+                — {role}
+              </span>
+            </div>
+            <ArrowUpRight
+              className="text-muted-foreground/30 group-hover:text-primary transition-colors"
+              size={18}
+            />
+          </div>
+
+          {/* Core Action (The "Short Description") */}
+          <p className="text-foreground font-mono text-sm font-medium">
+            {action}
+          </p>
+
+          {/* Detail (Optional context) */}
+          <p className="text-muted-foreground line-clamp-2 text-xs leading-relaxed">
+            {detail}
+          </p>
+        </div>
+      </div>
+    </Link>
   )
 }
