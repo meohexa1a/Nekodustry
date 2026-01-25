@@ -1,4 +1,4 @@
-import { Home, User, Boxes, CalendarDays, LayoutGrid, Swords, ShieldAlert } from "lucide-react";
+import { Home, User, Boxes, CalendarDays, LayoutGrid, Swords, ShieldAlert, Trophy } from "lucide-react";
 
 export const sidebarData = {
   navMain: [
@@ -40,6 +40,11 @@ export const sidebarData = {
       title: "Catali.io",
       url: "/game-modes/catali-io",
       icon: Swords,
+    },
+    {
+      title: "Ranked",
+      url: "/game-modes/ranked",
+      icon: Trophy,
     },
     {
       title: "Onslaught Protocol",
