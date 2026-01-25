@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, GitCommitHorizontal } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { FeatureCard } from '@/components/common/feature-card'
 import { AbstractBackground } from '@/components/app/abstract-background'
 
 export const metadata: Metadata = {
@@ -150,99 +151,40 @@ export default function AboutNekoPage() {
           </div>
 
           <div className="grid gap-4">
-            <ProjectLog
+            <FeatureCard
               href="/mintymdt"
               name="MintyMDT"
-              role="Lead Architect"
+              label="Lead Architect"
               action="Designing the DI container & Service Layer."
               detail="Decoupling infrastructure from logic to ensure the framework remains stable while game content evolves."
             />
 
-            <ProjectLog
+            <FeatureCard
               href="/game-modes/catali-io"
               name="Catali"
-              role="Maintainer"
+              label="Maintainer"
               action="Refactored legacy logic to v2 API."
               detail="Eliminated technical debt by rewriting the core loop, enforcing strict state management standards."
             />
 
-            <ProjectLog
+            <FeatureCard
               href="/game-modes/ranked"
               name="Ranked"
-              role="Game Mode Designer"
+              label="Game Mode Designer"
               action="Designing a deterministic 1v1 competitive game mode."
               detail="Focused on fairness, clear win conditions, and minimizing systemic variance in player outcomes."
             />
 
-            <ProjectLog
+            <FeatureCard
               href="/game-modes/onslaught-protocol"
               name="Onslaught Protocol"
-              role="Systems Researcher"
-              action="Exploring high-complexity PvE system design."
+              label="Systems Researcher"
+              action="Exploring high-complexity PvP & PvE system design."
               detail="Used to experiment with layered mechanics, scaling difficulty, and long-term balance under system pressure."
             />
           </div>
         </section>
       </div>
     </div>
-  )
-}
-
-function ProjectLog({
-  href,
-  name,
-  role,
-  action,
-  detail,
-}: {
-  href: string
-  name: string
-  role: string
-  action: string
-  detail: string
-}) {
-  return (
-    <Link
-      href={href}
-      className="group bg-background/40 hover:bg-background/80 border-border/40 hover:border-primary/50 relative block w-full rounded-lg border p-6 transition-all duration-300"
-    >
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-6">
-        {/* Icon & Connector line visual */}
-        <div className="hidden flex-col items-center gap-2 sm:flex">
-          <div className="bg-primary/10 text-primary flex h-8 w-8 items-center justify-center rounded-full">
-            <GitCommitHorizontal size={16} />
-          </div>
-          <div className="bg-border/50 h-full w-px" />
-        </div>
-
-        <div className="flex-1 space-y-2">
-          {/* Header */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <h3 className="text-foreground text-lg font-medium tracking-tight">
-                {name}
-              </h3>
-              <span className="text-muted-foreground/60 text-xs font-light tracking-wider uppercase">
-                — {role}
-              </span>
-            </div>
-            <ArrowUpRight
-              className="text-muted-foreground/30 group-hover:text-primary transition-colors"
-              size={18}
-            />
-          </div>
-
-          {/* Core Action (The "Short Description") */}
-          <p className="text-foreground font-mono text-sm font-medium">
-            {action}
-          </p>
-
-          {/* Detail (Optional context) */}
-          <p className="text-muted-foreground line-clamp-2 text-xs leading-relaxed">
-            {detail}
-          </p>
-        </div>
-      </div>
-    </Link>
   )
 }
