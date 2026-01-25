@@ -178,7 +178,7 @@ export default function AboutNekoPage() {
               href="/game-modes/onslaught-protocol"
               name="Onslaught Protocol"
               role="Systems Researcher"
-              action="Exploring high-complexity PvE system design."
+              action="Exploring high-complexity PvP & PvE system design."
               detail="Used to experiment with layered mechanics, scaling difficulty, and long-term balance under system pressure."
             />
           </div>

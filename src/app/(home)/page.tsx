@@ -40,7 +40,7 @@ function NodeLink({ href, title, subtitle, icon: Icon }: NodeLinkProps) {
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-transparent">
+    <div className="relative w-full">
       <AbstractBackground />
 
       <div className="relative flex flex-col gap-12 sm:gap-24">
@@ -94,7 +94,7 @@ export default function Home() {
             <NodeLink
               href="/game-modes/onslaught-protocol"
               title="Onslaught Protocol"
-              subtitle="PvE Game Mode"
+              subtitle="PvP & PvE Game Mode"
               icon={ShieldAlert}
             />
 
