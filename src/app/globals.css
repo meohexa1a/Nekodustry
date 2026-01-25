@@ -4,27 +4,42 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --text-2xs: 10px;
-  --text-3xs: 8px;
-  --text-4xs: 6px;
+  --text-2xs: 0.625rem;
+  --text-2xs--line-height: 1rem;
+
+  --text-3xs: 0.5rem;
+  --text-3xs--line-height: 0.75rem;
+
+  --text-4xs: 0.375rem;
+  --text-4xs--line-height: 0.625rem;
+
+  --tracking-widest-xl: 0.15em;
+  --tracking-widest-2xl: 0.2em;
+  --tracking-widest-3xl: 0.5em;
+
+  --leading-tighter: 1.1;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
+
   --color-sidebar: var(--sidebar);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -41,6 +56,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -48,6 +64,7 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   --color-status-success: var(--status-success);
 }
 
@@ -143,27 +160,27 @@
   }
 
   body {
-    @apply min-w-full min-h-screen bg-background text-foreground;
+    @apply w-full h-screen bg-background text-foreground;
+
+    .layout-grid-overlay {
+      @apply absolute inset-0 pointer-events-none;
+
+      background-size: 24px 24px;
+      background-image:
+        linear-gradient(to right, rgba(128, 128, 128, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(128, 128, 128, 0.07) 1px, transparent 1px);
+
+      -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+      mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    }
+
+    .layout-grid-overlay-big {
+      @apply absolute inset-0 pointer-events-none;
+
+      background-size: 4rem 4rem;
+      background-image:
+        linear-gradient(to right, rgba(128, 128, 128, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(128, 128, 128, 0.07) 1px, transparent 1px);
+    }
   }
-}
-
-@utility text-xxs {
-  font-size: 10px;
-  line-height: 1rem;
-}
-
-@utility tracking-widest-xl {
-  letter-spacing: 0.15em;
-}
-
-@utility tracking-widest-2xl {
-  letter-spacing: 0.2em;
-}
-
-@utility leading-tighter {
-  line-height: 1.1;
-}
-
-@utility tracking-widest-3xl {
-  letter-spacing: 0.5em;
 }

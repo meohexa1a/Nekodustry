@@ -1,59 +1,77 @@
-import { ArrowUpRight, Terminal } from "lucide-react";
-import { FaGithub, FaDiscord, FaInstagram, FaReddit } from "react-icons/fa6";
+import { ArrowUpRight, Terminal } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa6'
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string
+  children: React.ReactNode
+}) {
   return (
     <a
       href={href}
-      className="group flex items-center gap-2 text-xs text-muted-foreground/80 hover:text-primary transition-colors font-mono">
-      <span className="group-hover:translate-x-0.5 transition-transform">{children}</span>
-      <ArrowUpRight className="h-3 w-3 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+      className="group text-muted-foreground/80 hover:text-primary flex items-center gap-2 font-mono text-xs transition-colors"
+    >
+      <span className="transition-transform group-hover:translate-x-0.5">
+        {children}
+      </span>
+      <ArrowUpRight className="h-3 w-3 translate-x-0.5 -translate-y-0.5 opacity-0 transition-all group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
     </a>
-  );
+  )
 }
 
 export function AppFooter() {
   return (
-    <footer className="relative z-10 mx-4 rounded-t-2xl border-t backdrop-blur-sm overflow-hidden px-2 md:px-6">
-      {/* Grid Pattern Background */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
+    <footer className="bg-background/50 relative mx-4 rounded-t-2xl border border-b-0 backdrop-blur-sm">
+      <div className="layout-grid-overlay" />
 
-      {/* Grid Layout */}
-      <div className="relative grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 py-16">
-        {/* Column 1: Identity & About */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-2 text-primary">
+      <div className="relative grid w-full grid-cols-1 gap-10 px-6 py-12 md:grid-cols-2 md:px-12 lg:grid-cols-9 lg:gap-4">
+        <div className="col-span-1 space-y-6 md:col-span-2 lg:col-span-3">
+          <div className="text-primary flex items-center gap-2">
             <Terminal className="h-5 w-5" />
-            <span className="font-mono font-bold text-base tracking-tighter text-foreground">NEKODUSTRY</span>
+            <span className="text-foreground font-mono text-base font-bold tracking-tighter">
+              NEKODUSTRY
+            </span>
           </div>
-          <p className="text-xs text-muted-foreground leading-relaxed font-mono max-w-[280px]">
-            The central hub for Mindustry tooling, modding resources, and community projects. Built by the
-            community, for the community.
+
+          <p className="text-muted-foreground max-w-[280px] font-mono text-xs leading-relaxed">
+            Service layer for Nekodustry <br />
+            Server game modes, events, framework, and more!
           </p>
 
           <div className="flex gap-3 pt-2">
-            {[
-              { icon: FaGithub, href: "https://github.com/meohexa1a/Nekodustry", label: "Github" },
-              { icon: FaDiscord, href: "#", label: "Discord" },
-              { icon: FaInstagram, href: "#", label: "Instagram" },
-              { icon: FaReddit, href: "#", label: "Reddit" },
-            ].map((social, idx) => (
-              <a
-                key={idx}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 rounded-md bg-muted/30 hover:bg-primary/10 hover:text-primary transition-all border border-transparent hover:border-primary/20">
-                <social.icon className="h-4 w-4" />
-                <span className="sr-only">{social.label}</span>
-              </a>
-            ))}
+            <a
+              href="https://github.com/meohexa1a/Nekodustry"
+              target="_blank"
+              rel="noreferrer"
+              className="bg-muted/30 hover:bg-primary/10 hover:text-primary hover:border-primary/20 rounded-md border border-transparent p-2 transition-all"
+            >
+              <FaGithub className="h-4 w-4" />
+              <span className="sr-only">Github</span>
+            </a>
           </div>
         </div>
 
-        {/* Column 2: Mindustry Tool */}
-        <div className="space-y-6">
-          <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-foreground">Mindustry Tool</h3>
+        {/* Column 2: Resources */}
+        <div className="col-span-1 space-y-6 lg:col-span-2">
+          <h3 className="text-foreground/50 font-mono text-xs tracking-widest uppercase">
+            Resources
+          </h3>
+          <div className="flex flex-col gap-3">
+            <FooterLink href="/mintymdt">MintyMDT</FooterLink>
+            <FooterLink href="/game-modes/catali-io">Catali.io</FooterLink>
+            <FooterLink href="/game-modes/onslaught-protocol">
+              Onslaught Protocol
+            </FooterLink>
+          </div>
+        </div>
+
+        {/* Column 3: Mindustry Tool */}
+        <div className="col-span-1 space-y-6 lg:col-span-2">
+          <h3 className="text-foreground/50 font-mono text-xs tracking-widest uppercase">
+            Mindustry Tool
+          </h3>
           <div className="flex flex-col gap-3">
             <FooterLink href="#">Official Website</FooterLink>
             <FooterLink href="#">Official Discord</FooterLink>
@@ -62,45 +80,35 @@ export function AppFooter() {
           </div>
         </div>
 
-        {/* Column 3: Ecosystem */}
-        <div className="space-y-6">
-          <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-foreground">Ecosystem</h3>
-          <div className="flex flex-col gap-3">
-            <FooterLink href="/mintymdt">MintyMDT Framework</FooterLink>
-            <FooterLink href="/game-modes">Game Modes</FooterLink>
-            <FooterLink href="#">Modding Docs</FooterLink>
-            <FooterLink href="#">Asset Library</FooterLink>
-          </div>
-        </div>
-
         {/* Column 4: Project */}
-        <div className="space-y-6">
-          <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-foreground">Project</h3>
+        <div className="col-span-1 space-y-6 lg:col-span-2">
+          <h3 className="text-foreground/50 font-mono text-xs tracking-widest uppercase">
+            Related
+          </h3>
           <div className="flex flex-col gap-3">
-            <FooterLink href="/about-neko">About Nekodustry</FooterLink>
-            <FooterLink href="#">Changelog</FooterLink>
-            <FooterLink href="#">Contributing</FooterLink>
-            <FooterLink href="#">Status</FooterLink>
+            <FooterLink href="/about-neko">About Me</FooterLink>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border/40 bg-muted/5 -mx-6 md:-mx-12 px-6 md:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-center py-6 gap-4 text-2xs tracking-widest text-muted-foreground font-mono">
+      <div className="border-border/50 bg-muted/5 border-t px-6 md:px-12">
+        <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 py-8 font-mono text-xs tracking-widest md:flex-row">
           <p>
-            © 2026 NEKODUSTRY. Made with <span className="text-primary">❤️</span> by meohexa1a.
+            © 2026 <span className="text-foreground">NEKODUSTRY</span>. Made
+            with <span className="text-primary animate-pulse">❤️</span> by
+            meohexa1a.
           </p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#" className="hover:text-primary transition-colors">
               Terms of Use
             </a>
           </div>
         </div>
       </div>
     </footer>
-  );
+  )
 }
