@@ -1,4 +1,4 @@
-import { Home, User, Layers, Calendar, CalendarClock, PlayCircle, History, Gamepad2 } from "lucide-react";
+import { Home, User, Boxes, CalendarDays, LayoutGrid, Swords, ShieldAlert } from "lucide-react";
 
 export const sidebarData = {
   navMain: [
@@ -18,7 +18,7 @@ export const sidebarData = {
     {
       title: "MintyMDT",
       url: "/mintymdt",
-      icon: Layers,
+      icon: Boxes,
     },
   ],
 
@@ -26,7 +26,7 @@ export const sidebarData = {
     {
       title: "Overview",
       url: "/events",
-      icon: Calendar,
+      icon: CalendarDays,
     },
   ],
 
@@ -34,17 +34,17 @@ export const sidebarData = {
     {
       title: "Common Game Mode",
       url: "/game-modes/common",
-      icon: Gamepad2,
+      icon: LayoutGrid,
     },
     {
       title: "Catali.io",
       url: "/game-modes/catali-io",
-      icon: Gamepad2,
+      icon: Swords,
     },
     {
       title: "Onslaught Protocol",
       url: "/game-modes/onslaught-protocol",
-      icon: Gamepad2,
+      icon: ShieldAlert,
     },
   ],
 };
