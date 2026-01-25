@@ -28,21 +28,6 @@ export const sidebarData = {
       url: "/events",
       icon: Calendar,
     },
-    {
-      title: "Scheduled",
-      url: "/events/scheduled",
-      icon: CalendarClock,
-    },
-    {
-      title: "Ongoing",
-      url: "/events/ongoing",
-      icon: PlayCircle,
-    },
-    {
-      title: "Past",
-      url: "/events/past",
-      icon: History,
-    },
   ],
 
   navGameModes: [

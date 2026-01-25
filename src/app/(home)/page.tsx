@@ -14,7 +14,7 @@ function HeroSection() {
       <div className="space-y-8">
         <div className="group relative inline-block">
           {/* Subtle System Annotation */}
-          <div className="text-xxs tracking-widest-xl text-muted-foreground mb-6 font-mono leading-relaxed uppercase opacity-70">
+          <div className="text-xs tracking-widest-xl text-muted-foreground mb-6 font-mono leading-relaxed uppercase opacity-70">
             <span className="block">Operating as a service layer</span>
             <span className="block">within a larger community system</span>
           </div>
