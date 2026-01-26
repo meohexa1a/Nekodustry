@@ -1,64 +1,105 @@
-# Báo cáo Tổng quan Dự án Nekodustry
+# Báo cáo Chi tiết Dự án Nekodustry
 
-## 1. Giới thiệu chung
-**Nekodustry** là một nền tảng "Hệ điều hành" (Operating System) cho cộng đồng Mindustry, đóng vai trò là lớp dịch vụ (service layer) tập trung. Dự án này kết hợp các chế độ chơi (Game Modes), công cụ phát triển (Tools), và quản lý cộng đồng (Community Management) vào một giao diện thống nhất, hiện đại.
+## 1. Giới thiệu & Tầm nhìn
+**Nekodustry** được định nghĩa là một "Hệ điều hành" (Operating System) cho hệ sinh thái Mindustry. Dự án không chỉ là một website thông thường mà là một "Portal" (Cổng thông tin) tích hợp các dịch vụ, công cụ, và cộng đồng vào một giao diện hợp nhất.
 
 - **Tên dự án:** Nekodustry Portal
-- **Tác giả:** meohexa1a (Builder, Maintainer, System Thinker)
-- **Công nghệ chính:** Next.js 16, React 19, Tailwind CSS v4, Radix UI.
-- **Mô tả:** "Experimental Ecosystem" - Một hệ sinh thái thử nghiệm cung cấp cấu trúc hạ tầng cho cộng đồng phát triển tự nhiên thay vì áp đặt hướng đi cứng nhắc.
+- **Tác giả & Vận hành:** meohexa1a (Builder, Maintainer, System Thinker).
+- **Mô tả cốt lõi:** "Experimental Ecosystem" - Một hệ sinh thái thử nghiệm nơi hạ tầng (infrastructure) phục vụ cho sự phát triển tự nhiên của văn hóa cộng đồng.
+- **Trạng thái:** Đang phát triển tích cực (Active Development).
 
-## 2. Triết lý thiết kế (Design Philosophy)
-Dự án theo đuổi phong cách **"Systemic Minimalist"** (Tối giản hệ thống):
-- **Thẩm mỹ:** Kỹ thuật, độ tương phản cao, phong cách "Glass & Steel" (Kính và Thép).
-- **Cảm giác:** Tin cậy, Công nghiệp, Tương lai (Reliable, Industrial, Futuristic).
-- **Nguyên tắc cốt lõi:**
-    - **Service over authority:** Hạ tầng tồn tại để phục vụ, không phải để cai trị.
-    - **Design for replacement:** Mọi thành phần đều được thiết kế với giả định sẽ bị thay thế.
-    - **Abstraction over implementation:** Ưu tiên các lớp trừu tượng hóa và ranh giới dịch vụ.
+## 2. Triết lý Thiết kế & Trải nghiệm Người dùng (UX)
+Dự án tuân thủ nghiêm ngặt triết lý **"Systemic Minimalist"** (Tối giản Hệ thống).
 
-## 3. Các Phân Hệ Chính (Service Nodes)
+### A. Ngôn ngữ Thiết kế
+- **Thẩm mỹ:** "Glass & Steel" (Kính & Thép) - Hiện đại, sắc sảo, kỹ thuật cao.
+- **Màu sắc:** Sử dụng hệ màu **OKLCH** để đảm bảo độ tươi và tương phản tốt nhất trên mọi màn hình.
+    - **Dark Mode:** Nền xanh đen sâu (`oklch(0.145 0 0)`) tạo cảm giác chuyên nghiệp ("Technical Aesthetic").
+    - **Semantic Colors:** Sử dụng biến ngữ nghĩa (`--primary`, `--destructive`, `--status-success`) thay vì mã màu cứng.
+- **Typography:**
+    - **Geist Sans:** Cho nội dung chính và tiêu đề.
+    - **Geist Mono:** Cho dữ liệu kỹ thuật, metadata, và các yếu tố UI (System Data).
+
+### B. Nguyên tắc Cốt lõi
+1.  **Service over Authority:** Hệ thống tồn tại để phục vụ, làm nền tảng cho cộng đồng, không phải để kiểm soát.
+2.  **Abstraction over Implementation:** Ưu tiên thiết kế các lớp trừu tượng hóa (interfaces/layers) hơn là tối ưu hóa sớm các chi tiết cài đặt.
+3.  **Design for Replacement:** Mọi thành phần (kể cả người vận hành) đều được thiết kế để có thể thay thế mà không làm sập hệ thống.
+
+## 3. Kiến trúc Kỹ thuật (Technical Architecture)
+
+### A. Tech Stack (Công nghệ lõi)
+Dự án sử dụng những công nghệ mới nhất trong hệ sinh thái React:
+- **Framework:** **Next.js 16** (App Router).
+- **Core:** **React 19** (Sử dụng React Compiler).
+- **Styling:** **Tailwind CSS v4** (Cấu hình trực tiếp qua `@theme inline` trong CSS, không dùng file config JS).
+- **UI Primitives:** **Radix UI** (thông qua `shadcn/ui` base).
+- **Icons:** `lucide-react`.
+- **Animations:** `tw-animate-css` và `framer-motion`.
+
+### B. Tổ chức Component
+Mã nguồn được tổ chức theo cấu trúc phân cấp rõ ràng:
+1.  **Route-Specific:** Component chỉ dùng cho 1 trang -> Đặt ngay trong thư mục trang đó (e.g., `src/app/(home)/hero-section.tsx`).
+2.  **Domain Components (`src/components/app`):** Các component nghiệp vụ lớn, tái sử dụng trong một phạm vi (e.g., `AppSidebar`, `AppNavbar`, `AbstractBackground`).
+3.  **Common Components (`src/components/common`):** Các thành phần UI nhỏ, đa dụng (e.g., `FeatureCard`, `FeatureItem`).
+4.  **Base UI (`src/components/ui`):** Các thành phần cơ bản (Button, Input, Sheet) từ thư viện, được tùy biến style nhưng giữ nguyên logic.
+
+### C. Tiêu chuẩn Phát triển (Coding Standards)
+- **Formatting:** Prettier + prettier-plugin-tailwindcss.
+- **Quy tắc File:** Giới hạn mềm ~400 dòng/file. Tách file khi logic quá phức tạp.
+- **Hydration:** Tránh render không xác định (random/date) trực tiếp. Sử dụng `useEffect` hoặc `suppressHydrationWarning`.
+- **Accessibility:** Các yếu tố trang trí bắt buộc có `aria-hidden="true"`.
+
+## 4. Chi tiết Các Phân Hệ (Service Nodes)
 
 ### A. MintyMDT (Version 3)
-Đây là framework máy chủ siêu nhẹ (ultra-lightweight) dành cho Mindustry, tập trung vào trải nghiệm nhà phát triển.
-- **Tính năng nổi bật:**
-    - **Dependency Injection:** Sử dụng thư viện Feather để quản lý phụ thuộc, loại bỏ code rác (boilerplate) và trạng thái tĩnh (static state).
-    - **Siêu nhẹ:** ~64KB, không sử dụng reflection nặng nề.
-    - **Native Java 21:** Tận dụng các tính năng hiện đại của Java.
-    - **Anti-Boilerplate:** Giảm thiểu code thừa, tập trung vào logic nghiệp vụ.
+Framework máy chủ Mindustry thế hệ mới, giải quyết vấn đề "Spaghetti Code" của các server truyền thống.
+- **Kiến trúc:** Dependency Injection (DI) dựa trên thư viện **Feather**.
+- **Đặc điểm:**
+    - **Ultra Lightweight:** ~64KB.
+    - **Native Java 21:** Sử dụng Records, Pattern Matching.
+    - **Anti-Boilerplate:** Loại bỏ việc khởi tạo thủ công và biến static toàn cục.
+    - **Ecosystem:** Tích hợp sẵn State Manager và Event System.
 
 ### B. Game Modes (Chế độ chơi)
-Hệ thống cung cấp các môi trường gameplay đa dạng, được tối ưu hóa cho hiệu suất cao:
+Hệ thống các máy chủ game với trải nghiệm được tùy biến sâu:
 
-1.  **Common Game Mode (Core Operation Modules):**
-    - Chế độ chơi tiêu chuẩn với các cải tiến về UX (Giao diện lệnh, Trạng thái nhàn rỗi thông minh, Mini-game trong menu).
-    - Bao gồm: Survival, Attack, PvP, và Sandbox.
+#### 1. Common Game Mode (Core Modules)
+- **Chủ đề:** Neon / System Override.
+- **Tính năng UX:**
+    - **Command Interface:** Giao diện lệnh trực quan (GUI Layer).
+    - **Smart Idle State:** Tự động tối ưu hóa tài nguyên khi treo máy.
+    - **Menu Mini Game:** Giải trí ngay trong menu.
+- **Các chế độ con:** Survival (Amber), Attack (Rose), PvP (Violet), Sandbox (Cyan).
 
-2.  **Catali.io (Project_Catali // Version_2.0):**
-    - Thể loại: Tactical RPG Warfare (PvPvE).
-    - Đặc điểm: Hệ thống lớp nhân vật (Vanguard, Phantom, Marksman, Architect), nền kinh tế trong game, và hệ thống kỹ năng tùy chỉnh.
-    - Phong cách: Cyberpunk, Neon.
+#### 2. Catali.io (Project_Catali // Version_2.0)
+- **Thể loại:** Tactical RPG Warfare (PvPvE).
+- **Phong cách:** Cyberpunk / High-Tech.
+- **Hệ thống Lớp nhân vật (Classes):**
+    - **The Vanguard:** Tank / Crowd Control (Cam).
+    - **The Phantom:** Assassin / Burst (Tím).
+    - **The Marksman:** DPS / Range (Đỏ).
+    - **The Architect:** Support / Utility (Xanh lục).
+- **Cơ chế:** Hệ thống kinh nghiệm (XP), Cây kỹ năng, và Shop vật phẩm trong game.
 
-3.  **Ranked (Season 0: Pre-Alpha):**
-    - Thể loại: 1v1 Competitive.
-    - Đặc điểm: Tập trung vào sự công bằng tuyệt đối (True Fairness), mô hình sát thương xác định (deterministic), hệ thống ELO và xếp hạng theo mùa.
-    - Phong cách: Gold/Amber (Vinh quang).
+#### 3. Ranked (Season 0: Pre-Alpha)
+- **Thể loại:** 1v1 Competitive.
+- **Phong cách:** Gold / Glory (Vàng kim).
+- **Tính năng:**
+    - **True Fairness:** Loại bỏ yếu tố ngẫu nhiên (RNG), sát thương xác định.
+    - **ELO System:** Hệ thống xếp hạng leo rank từ Bronze đến Grandmaster.
+    - **Seasonal Glory:** Reset theo mùa giải, phần thưởng vinh danh.
 
-4.  **Onslaught Protocol:**
-    - Thể loại: Hardcore PvP/PvE.
-    - Đặc điểm: Chiến đấu đồng đội chiến thuật, chế độ Permadeath (chết vĩnh viễn), các sự kiện hỗn loạn do AI hỗ trợ.
-    - Trạng thái: Đang phát triển (Development).
+#### 4. Onslaught Protocol
+- **Thể loại:** Hardcore Team Combat.
+- **Phong cách:** Red / Danger (Đỏ báo động).
+- **Tính năng:**
+    - **Permadeath:** Chế độ chết vĩnh viễn trong lượt chơi.
+    - **AI-Assisted Chaos:** Sự kiện ngẫu nhiên do AI điều khiển.
+    - **Live Feed:** Theo dõi diễn biến trận đấu thời gian thực (Sector 7).
 
-### C. Events (Sự kiện)
-- Phân hệ quản lý các dịch vụ thời gian (temporal services) như giải đấu.
-- **Trạng thái hiện tại:** Đang bảo trì (MAINTAINCE).
+### C. Community & Events
+- **Events:** Đang trong trạng thái bảo trì.
+- **About Neko:** Trang giới thiệu cá nhân nhưng được trình bày như một giao thức định danh ("Identity Protocol"), nhấn mạnh vào vai trò vận hành hệ thống bền vững.
 
-### D. About Neko (Thông tin tác giả)
-- **meohexa1a:** Định vị bản thân là người xây dựng và vận hành hệ thống.
-- **Quan điểm:** Xây dựng các hệ thống có thể tồn tại lâu hơn người tạo ra nó. Hệ thống (Nekodustry) cung cấp hạ tầng, Cộng đồng (Mindustry Tool) tạo nên văn hóa, và Tác giả (Operator) chỉ là người vận hành bảo trì.
-
-## 4. Cấu trúc kỹ thuật
-- **Frontend:** Sử dụng Next.js App Router.
-- **Styling:** Tailwind CSS v4 với các biến màu semantic (OKLCH) và animations từ `tw-animate-css`.
-- **Icons:** `lucide-react`.
-- **Cấu hình:** Các cấu hình tĩnh (sidebar, navigation) được tách biệt trong thư mục `src/config`.
+## 5. Kết luận
+Nekodustry không chỉ là một trang web giới thiệu game server, mà là một **nền tảng kỹ thuật số hoàn chỉnh**. Nó áp dụng tư duy thiết kế phần mềm hiện đại (Service-Oriented, Modular, High-Performance) vào việc quản lý và vận hành cộng đồng game, tạo ra một trải nghiệm người dùng nhất quán, chuyên nghiệp và đầy cảm hứng.
