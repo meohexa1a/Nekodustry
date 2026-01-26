@@ -23,14 +23,14 @@ export function FeatureItem({
   const content = (
     <div
       className={cn(
-        'group border-border border-b py-8 transition-all duration-300 hover:pl-4',
+        'group border-border border-b py-8 transition-all duration-300 hover:pl-4 group-focus-visible/link:pl-4',
         'relative flex w-full items-center justify-between',
         className,
       )}
     >
       <div className="flex items-center gap-6">
-        <div className="bg-secondary text-muted-foreground group-hover:bg-foreground group-hover:text-background flex h-12 w-12 items-center justify-center rounded-full transition-colors">
-          <Icon size={20} strokeWidth={1.5} />
+        <div className="bg-secondary text-muted-foreground group-hover:bg-foreground group-hover:text-background group-focus-visible/link:bg-foreground group-focus-visible/link:text-background flex h-12 w-12 items-center justify-center rounded-full transition-colors">
+          <Icon size={20} strokeWidth={1.5} aria-hidden="true" />
         </div>
         <div>
           <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export function FeatureItem({
             {badge && (
               <Badge
                 variant="secondary"
-                className="group-hover:text-primary text-[10px] font-bold tracking-wider uppercase transition-colors"
+                className="group-hover:text-primary group-focus-visible/link:text-primary text-[10px] font-bold tracking-wider uppercase transition-colors"
               >
                 {badge}
               </Badge>
@@ -50,15 +50,16 @@ export function FeatureItem({
         </div>
       </div>
       <ArrowRight
-        className="text-muted-foreground group-hover:text-foreground transition-transform duration-300 group-hover:-translate-x-2"
+        className="text-muted-foreground group-hover:text-foreground group-focus-visible/link:text-foreground transition-transform duration-300 group-hover:-translate-x-2 group-focus-visible/link:-translate-x-2"
         strokeWidth={1.5}
+        aria-hidden="true"
       />
     </div>
   )
 
   if (href) {
     return (
-      <Link href={href} className="group block w-full">
+      <Link href={href} className="group/link block w-full">
         {content}
       </Link>
     )
