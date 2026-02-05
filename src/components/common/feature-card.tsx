@@ -25,7 +25,7 @@ export function FeatureCard({
   const content = (
     <div
       className={cn(
-        'group border-border/40 bg-background/40 hover:bg-background/80 hover:border-primary/50 relative block w-full rounded-lg border p-6 transition-all duration-300',
+        'group border-border/40 bg-background/40 hover:bg-background/80 hover:border-primary/50 group-focus-visible/card:bg-background/80 group-focus-visible/card:border-primary/50 relative block w-full rounded-lg border p-6 transition-all duration-300',
         className,
       )}
     >
@@ -33,9 +33,9 @@ export function FeatureCard({
         {/* Icon & Connector line visual */}
         <div className="hidden flex-col items-center gap-2 sm:flex">
           <div className="bg-primary/10 text-primary flex h-8 w-8 items-center justify-center rounded-full">
-            <Icon size={16} />
+            <Icon size={16} aria-hidden="true" />
           </div>
-          <div className="bg-border/50 group-hover:bg-primary/20 h-full w-px transition-colors" />
+          <div className="bg-border/50 group-hover:bg-primary/20 group-focus-visible/card:bg-primary/20 h-full w-px transition-colors" />
         </div>
 
         <div className="flex-1 space-y-2">
@@ -52,8 +52,9 @@ export function FeatureCard({
               )}
             </div>
             <ArrowUpRight
-              className="text-muted-foreground/30 group-hover:text-primary transition-colors"
+              className="text-muted-foreground/30 group-hover:text-primary group-focus-visible/card:text-primary transition-colors"
               size={18}
+              aria-hidden="true"
             />
           </div>
 
@@ -73,7 +74,7 @@ export function FeatureCard({
 
   if (href) {
     return (
-      <Link href={href} className="w-full">
+      <Link href={href} className="group/card w-full">
         {content}
       </Link>
     )
